@@ -273,14 +273,16 @@ Discarded       0       0</code></pre>
 <h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
 <p>The visualization of the output is in the following:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">love.plot</span>(<span class="fu">bal.tab</span>(psm_n),</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">stat=</span><span class="fu">c</span>(<span class="st">'m'</span>,<span class="st">'v'</span>),</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">love.plot</span>(<span class="fu">bal.tab</span>(psm_n),</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">stat=</span><span class="fu">c</span>(<span class="st">'m'</span>),</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">grid=</span><span class="cn">TRUE</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">threshold=</span><span class="fu">c</span>(<span class="at">m=</span>.<span class="dv">25</span>, <span class="at">v=</span><span class="fl">1.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Standardized mean differences and raw mean differences are present in the same plot. 
-Use the `stars` argument to distinguish between them and appropriately label the x-axis.</code></pre>
-</div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">size=</span><span class="dv">2</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">stars=</span><span class="st">"std"</span> ,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">sample.names=</span><span class="fu">c</span>(<span class="st">"matched"</span>, <span class="st">"unmatched"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">threshold=</span><span class="fu">c</span>(<span class="at">m=</span>.<span class="dv">25</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"SMD"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -288,8 +290,8 @@ Use the `stars` argument to distinguish between them and appropriately label the
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(psm_n, <span class="at">type =</span> <span class="st">"density"</span>, <span class="at">interactive =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">which.xs =</span> <span class="sc">~</span>Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank<span class="sc">+</span> Ethnicity<span class="sc">+</span>BA_to_PHD<span class="sc">+</span>PHD_to_Fac<span class="sc">+</span>Fac_to_decision)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(psm_n, <span class="at">type =</span> <span class="st">"density"</span>, <span class="at">interactive =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">which.xs =</span> <span class="sc">~</span>Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank<span class="sc">+</span> Ethnicity<span class="sc">+</span>BA_to_PHD<span class="sc">+</span>PHD_to_Fac<span class="sc">+</span>Fac_to_decision)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -318,54 +320,113 @@ Use the `stars` argument to distinguish between them and appropriately label the
 <h2 class="anchored" data-anchor-id="summary-of-logistic-regression">Summary of Logistic Regression</h2>
 <p>The following is the output of Logistic regression</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>matched_data <span class="ot">&lt;-</span> <span class="fu">match.data</span>(psm_n)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index<span class="sc">+</span>Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank <span class="sc">+</span> </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    Ethnicity <span class="sc">+</span> BA_to_PHD <span class="sc">+</span> PHD_to_Fac <span class="sc">+</span> Fac_to_decision,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>matched_data <span class="ot">&lt;-</span> <span class="fu">match.data</span>(psm_n)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index<span class="sc">*</span>(Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank <span class="sc">+</span> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    Ethnicity <span class="sc">+</span> BA_to_PHD <span class="sc">+</span> PHD_to_Fac <span class="sc">+</span> Fac_to_decision),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> <span class="fu">binomial</span>(<span class="at">link=</span><span class="st">"logit"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-glm(formula = tenure ~ Econ_Index + Journal_rank + Gender + Author.Position + 
-    Rank + Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision, 
-    family = binomial, data = matched_data)
+glm(formula = tenure ~ Econ_Index * (Journal_rank + Gender + 
+    Author.Position + Rank + Ethnicity + BA_to_PHD + PHD_to_Fac + 
+    Fac_to_decision), family = binomial(link = "logit"), data = matched_data)
 
 Deviance Residuals: 
      Min        1Q    Median        3Q       Max  
--2.24811  -0.00018   0.24533   0.70390   1.49813  
+-2.36142  -0.00006   0.00151   0.52056   2.26047  
 
-Coefficients:
-                              Estimate Std. Error z value Pr(&gt;|z|)
-(Intercept)                  1.377e+01  2.040e+03   0.007    0.995
-Econ_IndexInterdisciplinary -4.958e-01  6.013e-01  -0.824    0.410
-Journal_rank.L               1.148e+01  6.427e+03   0.002    0.999
-Journal_rank.Q               1.003e+01  5.867e+03   0.002    0.999
-Journal_rank.C               7.569e+00  4.008e+03   0.002    0.998
-Journal_rank^4               5.344e+00  2.032e+03   0.003    0.998
-Journal_rank^5               1.544e+00  6.774e+02   0.002    0.998
-Gendermale                  -1.129e-02  6.757e-01  -0.017    0.987
-Author.Position.L            6.016e+00  8.714e+02   0.007    0.994
-Author.Position.Q           -1.619e+01  1.948e+03  -0.008    0.993
-Author.Position.C           -2.442e+01  2.614e+03  -0.009    0.993
-Rank                         2.213e-03  2.385e-02   0.093    0.926
-Ethnicity2                  -1.883e+01  3.305e+03  -0.006    0.995
-Ethnicity3                  -1.560e+00  2.439e+00  -0.640    0.522
-Ethnicity4                  -1.862e+01  3.363e+03  -0.006    0.996
-Ethnicity5                  -1.601e-01  7.101e-01  -0.225    0.822
-Ethnicity6                  -2.257e-02  1.969e+00  -0.011    0.991
-BA_to_PHD                   -2.080e-02  1.362e-01  -0.153    0.879
-PHD_to_Fac                   1.261e-01  1.914e-01   0.659    0.510
-Fac_to_decision             -4.709e-02  1.313e-01  -0.359    0.720
+Coefficients: (4 not defined because of singularities)
+                                                Estimate Std. Error z value
+(Intercept)                                    3.122e+00  7.734e+03   0.000
+Econ_IndexInterdisciplinary                    1.377e+01  8.296e+03   0.002
+Journal_rank.L                                -4.978e+01  2.273e+04  -0.002
+Journal_rank.Q                                -1.782e+01  2.173e+04  -0.001
+Journal_rank.C                                -1.722e+01  1.009e+04  -0.002
+Journal_rank^4                                 4.474e+00  5.506e+03   0.001
+Journal_rank^5                                 1.879e+00  9.580e+02   0.002
+Gendermale                                     8.801e-01  1.041e+00   0.845
+Author.Position.L                             -8.410e+00  2.126e+03  -0.004
+Author.Position.Q                              4.296e-01  2.660e+03   0.000
+Author.Position.C                             -1.705e+01  3.103e+03  -0.005
+Rank                                          -2.318e-02  4.815e-02  -0.481
+Ethnicity2                                    -1.971e+01  6.226e+03  -0.003
+Ethnicity3                                    -3.519e+00  5.595e+00  -0.629
+Ethnicity4                                    -2.210e+01  4.556e+03  -0.005
+Ethnicity5                                    -1.517e+00  1.295e+00  -1.172
+Ethnicity6                                    -2.518e+00  2.505e+00  -1.005
+BA_to_PHD                                     -1.418e-01  1.976e-01  -0.718
+PHD_to_Fac                                     3.330e-02  3.995e-01   0.083
+Fac_to_decision                               -3.610e-02  2.169e-01  -0.166
+Econ_IndexInterdisciplinary:Journal_rank.L     7.554e+01  2.084e+04   0.004
+Econ_IndexInterdisciplinary:Journal_rank.Q     1.215e+01  2.326e+04   0.001
+Econ_IndexInterdisciplinary:Journal_rank.C     3.355e+01  8.353e+03   0.004
+Econ_IndexInterdisciplinary:Journal_rank^4    -3.268e+00  6.211e+03  -0.001
+Econ_IndexInterdisciplinary:Journal_rank^5            NA         NA      NA
+Econ_IndexInterdisciplinary:Gendermale        -5.614e+00  2.700e+00  -2.079
+Econ_IndexInterdisciplinary:Author.Position.L  1.206e+01  2.568e+03   0.005
+Econ_IndexInterdisciplinary:Author.Position.Q -1.658e+01  4.178e+03  -0.004
+Econ_IndexInterdisciplinary:Author.Position.C -9.825e+00  5.321e+03  -0.002
+Econ_IndexInterdisciplinary:Rank               1.085e-01  7.552e-02   1.437
+Econ_IndexInterdisciplinary:Ethnicity2         1.529e-01  1.400e+04   0.000
+Econ_IndexInterdisciplinary:Ethnicity3                NA         NA      NA
+Econ_IndexInterdisciplinary:Ethnicity4                NA         NA      NA
+Econ_IndexInterdisciplinary:Ethnicity5         2.402e+00  1.923e+00   1.250
+Econ_IndexInterdisciplinary:Ethnicity6                NA         NA      NA
+Econ_IndexInterdisciplinary:BA_to_PHD          2.534e-01  4.648e-01   0.545
+Econ_IndexInterdisciplinary:PHD_to_Fac        -1.521e-01  5.315e-01  -0.286
+Econ_IndexInterdisciplinary:Fac_to_decision   -9.904e-01  4.859e-01  -2.038
+                                              Pr(&gt;|z|)  
+(Intercept)                                     0.9997  
+Econ_IndexInterdisciplinary                     0.9987  
+Journal_rank.L                                  0.9983  
+Journal_rank.Q                                  0.9993  
+Journal_rank.C                                  0.9986  
+Journal_rank^4                                  0.9994  
+Journal_rank^5                                  0.9984  
+Gendermale                                      0.3978  
+Author.Position.L                               0.9968  
+Author.Position.Q                               0.9999  
+Author.Position.C                               0.9956  
+Rank                                            0.6302  
+Ethnicity2                                      0.9975  
+Ethnicity3                                      0.5294  
+Ethnicity4                                      0.9961  
+Ethnicity5                                      0.2413  
+Ethnicity6                                      0.3148  
+BA_to_PHD                                       0.4730  
+PHD_to_Fac                                      0.9336  
+Fac_to_decision                                 0.8678  
+Econ_IndexInterdisciplinary:Journal_rank.L      0.9971  
+Econ_IndexInterdisciplinary:Journal_rank.Q      0.9996  
+Econ_IndexInterdisciplinary:Journal_rank.C      0.9968  
+Econ_IndexInterdisciplinary:Journal_rank^4      0.9996  
+Econ_IndexInterdisciplinary:Journal_rank^5          NA  
+Econ_IndexInterdisciplinary:Gendermale          0.0376 *
+Econ_IndexInterdisciplinary:Author.Position.L   0.9963  
+Econ_IndexInterdisciplinary:Author.Position.Q   0.9968  
+Econ_IndexInterdisciplinary:Author.Position.C   0.9985  
+Econ_IndexInterdisciplinary:Rank                0.1508  
+Econ_IndexInterdisciplinary:Ethnicity2          1.0000  
+Econ_IndexInterdisciplinary:Ethnicity3              NA  
+Econ_IndexInterdisciplinary:Ethnicity4              NA  
+Econ_IndexInterdisciplinary:Ethnicity5          0.2115  
+Econ_IndexInterdisciplinary:Ethnicity6              NA  
+Econ_IndexInterdisciplinary:BA_to_PHD           0.5857  
+Econ_IndexInterdisciplinary:PHD_to_Fac          0.7747  
+Econ_IndexInterdisciplinary:Fac_to_decision     0.0415 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
     Null deviance: 113.393  on 97  degrees of freedom
-Residual deviance:  77.695  on 78  degrees of freedom
-AIC: 117.69
+Residual deviance:  56.876  on 64  degrees of freedom
+AIC: 124.88
 
 Number of Fisher Scoring iterations: 18</code></pre>
 </div>
