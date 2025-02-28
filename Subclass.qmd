@@ -1,0 +1,66 @@
+---
+title: "Subclass"
+format: html
+---
+
+## PSM Model
+
+The following output is the psm with the method= 'Subclass'.
+
+```{r, echo=FALSE, results='hide', message=FALSE}
+library("MatchIt")
+library("cobalt")    
+library("ggplot2")   
+library('dplyr')
+library('lme4')
+final_data <- read.csv('final.csv')
+final_data$Gender <- as.factor(final_data$Gender)
+final_data$Ethnicity <- as.factor(final_data$Ethnicity)
+final_data$Econ_Index <- as.factor(final_data$Econ_Index)
+final_data$tenure <- as.factor(final_data$tenure)  
+final_data$Author.Position <- ordered(final_data$Author.Position, levels = c(0:4))
+final_data$Journal_rank <- ordered(final_data$Journal_rank, levels = c(1:9))
+final_data$Rank <- as.numeric(final_data$Rank)
+```
+
+```{r}
+#| echo: TRUE
+psm_s<- matchit(Econ_Index ~ Journal_rank + Gender + Author.Position + Rank + Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision,
+                data = final_data, method='subclass', distance= 'glm')
+summary(psm_s,un=FALSE)
+```
+
+### Visualization
+
+The visualization of the output is in the following:
+
+```{r}
+#| echo: TRUE
+love.plot(bal.tab(psm_s),
+          stat=c('m','v'),
+          grid=TRUE,
+          threshold=c(m=.25, v=1.25))
+
+plot(psm_s, type = "density", interactive = FALSE,
+      which.xs = ~Journal_rank + Gender + Author.Position + Rank+ Ethnicity+BA_to_PHD+PHD_to_Fac+Fac_to_decision)
+  
+
+```
+
+## Summary of Logistic Regression
+
+The following is the output of Logistic regression
+
+```{r, echo=TRUE, warning= FALSE}
+matched_data <- match.data(psm_s)
+
+model<- glm(
+  tenure ~ Econ_Index+Journal_rank + Gender + Author.Position + Rank + 
+    Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision,
+  data = matched_data,
+  family = binomial
+)
+
+
+summary(model)
+```

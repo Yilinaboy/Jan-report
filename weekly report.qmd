@@ -1,0 +1,39 @@
+---
+title: "Summary of the Data"
+date: today
+format: html
+---
+
+## Data Summary
+
+I have tried three methods including 'nearest', 'optimal' and 'full' to run the propensity score matching. Among all three methods, the full optimal score matching shows a significant results in the later logistic regression analysis.
+
+The following is the code for pre-processing and summary of the dataset. 
+
+```{r, echo=TRUE, message=FALSE}
+library("MatchIt")
+library("cobalt")    
+library("ggplot2")   
+library('dplyr')
+library('lme4')
+final_data <- read.csv('final.csv')
+final_data$Gender <- as.factor(final_data$Gender)
+final_data$Ethnicity <- as.factor(final_data$Ethnicity)
+final_data$Econ_Index <- as.factor(final_data$Econ_Index)
+final_data$tenure <- as.factor(final_data$tenure)  
+final_data$Author.Position <- ordered(final_data$Author.Position, levels = c(0:4))
+final_data$Journal_rank <- ordered(final_data$Journal_rank, levels = c(1:9))
+final_data$Rank <- as.numeric(final_data$Rank)
+final_data<- final_data[,-1]
+summary(final_data)
+```
+### Coding for Ethnicity
+
+- Caucasian White: 1
+- Hispanic/Latino: 2
+- Black: 3 
+- Middle East or North Africa (Arabic, Israeli): 4
+- Eastern Asian: 5
+- South Asian: 6
+
+

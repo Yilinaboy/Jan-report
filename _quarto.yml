@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "January Report"
+  navbar:
+    left:
+      - href: weekly report.qmd
+        text: Summary of the Data
+      - href: Nearest.qmd
+        text: PSM- Nearest method
+      - href: Optimal.qmd
+        text: PSM- Optimal method
+      - href: Full.qmd
+        text: PSM- Full method
+      - href: Subclass.qmd
+        text: PSM- Subclass method
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+editor: visual

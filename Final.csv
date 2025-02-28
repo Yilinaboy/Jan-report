@@ -1,0 +1,554 @@
+,Name,tenure,Econ_Index,Journal_rank,Gender,Ethnicity,Author.Position,Rank,BA_to_PHD,PHD_to_Fac,Fac_to_decision
+364,Myrto Kalouptsidi,1,Disciplinary,2,female,1,0,1,7,1,10
+434,Robin S. Lee,1,Disciplinary,2,male,5,0,1,5,1,9
+5,Adi Sunderam,1,Disciplinary,3,male,6,1,1,6,0,5
+24,Amanda Pallais,1,Disciplinary,3,female,1,1,1,5,0,4
+146,Emily Breza,1,Disciplinary,4,female,1,1,1,7,0,4
+175,Gabriel Chodorow-Reich,1,Disciplinary,4,male,1,1,1,8,1,5
+340,Melissa Dell,1,Disciplinary,2,female,1,1,1,7,2,4
+412,Pol Antras,1,Disciplinary,2,male,1,1,1,5,0,4
+445,Samuel G. Hanson,1,Disciplinary,4,male,5,1,1,5,1,9
+509,Tomasz Strzalecki,1,Disciplinary,3,male,1,1,1,6,1,4
+479,Stefanie Stantcheva,1,Disciplinary,1,female,1,2,1,7,2,1
+127,David Y. Yang,1,Disciplinary,2,male,5,3,1,6,2,2
+18,Alexander Wolitzky,1,Disciplinary,2,male,4,0,2,4,3,2
+26,Amy Finkelstein,1,Disciplinary,1,female,1,0,2,6,4,2
+47,Anna Mikusheva,1,Disciplinary,2,female,1,0,2,3,6,5
+57,Arnaud Costinot,1,Disciplinary,2,male,1,0,2,5,0,5
+121,David Atkin,1,Disciplinary,1,male,1,0,2,7,0,8
+122,David Autor,1,Interdisciplinary,2,male,1,0,2,10,0,6
+218,Iván Werning,1,Disciplinary,1,male,2,0,2,6,0,4
+327,Martin Beraja,1,Disciplinary,1,male,2,0,2,8,1,6
+378,Nikhil Agarwal,1,Disciplinary,2,male,6,0,2,5,1,5
+521,Victor Chernozhukov,1,Interdisciplinary,2,male,1,0,2,3,0,5
+106,Clare Balboni,0,Disciplinary,4,female,1,1,2,12,0,4
+153,Esther Duflo,1,Disciplinary,1,female,1,1,2,5,0,3
+362,Muhamet Yildiz,1,Disciplinary,2,male,4,1,2,8,0,7
+390,Parag A. Pathak,1,Disciplinary,1,male,6,1,2,5,1,3
+505,Tobias Salz,1,Disciplinary,2,male,1,2,2,7,1,6
+17,Alexander Torgovitsky,1,Disciplinary,1,female,1,0,3,6,-1,6
+160,Evan K. Rose,1,Disciplinary,2,male,1,0,3,9,2,2
+19,Ali Hortaçsu,1,Disciplinary,2,male,1,1,3,5,0,5
+66,Azeem M. Shaikh,1,Disciplinary,4,male,6,1,3,6,1,4
+305,Magne Mogstad,1,Disciplinary,3,male,1,1,3,3,0,4
+494,Thibaut Lamadon,1,Disciplinary,1,male,1,1,3,10,1,8
+7,Adrien Auclert,1,Disciplinary,1,male,1,0,4,8,1,8
+77,Brad Larsen,0,Interdisciplinary,2,male,1,0,4,5,1,8
+171,Florian Scheuer,0,Disciplinary,1,male,1,0,4,5,0,6
+210,Isaac Sorkin,1,Disciplinary,1,male,1,0,4,8,1,8
+252,Jonathan Levin,1,Disciplinary,1,male,5,0,4,5,1,5
+270,Kalina Manova,0,Disciplinary,3,female,1,0,4,5,0,9
+300,Liran Einav,1,Disciplinary,3,male,1,0,4,5,0,5
+342,Meredith Startz,0,Disciplinary,1,female,1,0,4,10,0,3
+389,Pablo Kurlat,0,Disciplinary,2,male,4,0,4,8,0,8
+420,Ran Abramitzky,1,Disciplinary,2,male,4,0,4,7,0,8
+60,Arun G. Chandrasekhar,1,Disciplinary,1,male,6,1,4,5,1,7
+301,Luigi Bocola,1,Disciplinary,1,male,1,1,4,9,1,2
+302,Luigi Pistaferri,1,Disciplinary,5,male,1,1,4,9,1,2
+329,Martin Schneider,1,Disciplinary,2,male,1,1,4,6,0,8
+339,Melanie Morten,1,Disciplinary,2,female,1,1,4,8,1,7
+358,Monika Piazzesi,1,Disciplinary,1,female,1,1,4,6,0,3
+363,Muriel Niederle,1,Disciplinary,1,female,1,1,4,6,0,5
+373,Nicholas Bloom,1,Disciplinary,1,male,4,1,4,7,4,4
+148,Enrico Moretti,1,Disciplinary,2,male,1,0,5,7,0,4
+333,Matthew Backus,1,Disciplinary,1,male,1,0,5,9,1,11
+70,Benjamin Faber,1,Disciplinary,1,male,1,1,5,7,1,6
+84,Bryan S. Graham,1,Disciplinary,3,male,1,1,5,8,0,6
+166,Federico Echenique,1,Disciplinary,3,male,1,1,5,5,0,4
+176,Gabriel Zucman,1,Disciplinary,2,male,4,1,5,3,1,5
+255,Jonathan T. Kolstad,1,Disciplinary,1,male,1,1,5,7,0,8
+276,Kei Kawai,0,Disciplinary,1,male,5,1,5,5,0,8
+391,Patrick McGraw Kline,1,Disciplinary,2,male,4,1,5,8,0,8
+513,Ulrike Malmendier,1,Disciplinary,3,female,1,1,5,6,0,6
+99,Christoph Rothe,0,Disciplinary,1,male,1,0,6,9,0,8
+138,Douglas Almond,1,Interdisciplinary,3,male,1,0,6,9,2,6
+151,Eric Verhoogen,1,Disciplinary,2,male,1,0,6,13,0,6
+353,Miguel Urquiola,1,Disciplinary,1,male,1,0,6,8,3,6
+415,Qingmin Liu,1,Disciplinary,1,male,5,0,6,5,1,6
+441,Réka Juhász,0,Disciplinary,2,female,1,0,6,12,1,6
+484,Suresh Naidu,1,Disciplinary,2,male,6,0,6,7,2,6
+529,Wojciech Kopczuk,1,Disciplinary,2,male,1,0,6,5,0,4
+45,Andrés Drenik,0,Disciplinary,1,male,2,1,6,8,0,8
+174,François Gerard,0,Disciplinary,1,male,1,1,6,7,0,6
+232,Jennifer La'O,1,Disciplinary,1,female,3,1,6,5,3,6
+12,Aislinn Bohren,1,Disciplinary,2,female,1,0,7,8,1,6
+15,Alessandro Dovis,1,Disciplinary,1,male,1,1,7,9,0,10
+208,Iourii Manovskii,1,Disciplinary,1,male,1,1,7,9,0,11
+235,Jesús Fernández-Villaverde,1,Disciplinary,4,male,1,1,7,5,0,6
+38,Andrew Shephard,1,Disciplinary,1,male,1,2,7,9,0,10
+103,Christopher T. Conlon,1,Disciplinary,3,male,1,1,8,6,6,6
+180,Gian Luca Clementi,1,Disciplinary,2,male,1,1,8,7,0,11
+265,Joyee Deb,1,Disciplinary,1,female,6,1,8,6,0,11
+306,Maher Said,1,Disciplinary,2,male,4,1,8,6,1,4
+348,Michael J. Dickstein,1,Disciplinary,1,male,4,1,8,6,2.8,6
+516,Vaidyanathan (Venky) Venkateswaran,1,Disciplinary,3,male,6,1,8,15,0,8
+48,Annie Liang,1,Disciplinary,1,female,5,0,9,5,1,7
+82,Bruno Strulovici,1,Disciplinary,1,male,1,0,9,7,3,6
+183,Giorgio E. Primiceri,1,Disciplinary,1,male,1,0,9,6,0,7
+231,Jeffrey T. Lewis,1,Disciplinary,8,male,1,0,9,5,2,8
+312,Marciano Siniscalchi,1,Disciplinary,2,male,1,0,9,6,0,7
+411,Piotr Dworczak,1,Disciplinary,2,male,1,0,9,6,1,4
+530,Wojciech Olszewski,1,Disciplinary,2,male,1,0,9,8,0,6
+16,Alessandro Pavan,1,Disciplinary,1,male,6,1,9,5,3,4
+110,Cynthia Kinnan,0,Interdisciplinary,2,female,1,1,9,7,0,8
+215,Ivan A. Canay,1,Disciplinary,3,male,4,1,9,7,0,7
+295,Lee Lockwood,0,Disciplinary,1,male,1,1,9,7,2,5
+308,Mar Reguant,1,Disciplinary,1,female,1,1,9,5,0,6
+324,Marti Mestieri,0,Disciplinary,2,male,4,1,9,8,0,6
+451,Sara Hernández-Saborit,1,Interdisciplinary,4,female,1,1,9,6,0,6
+524,Vivek Bhattacharya,1,Disciplinary,1,male,6,1,9,5,0,7
+541,Yingni Guo,1,Disciplinary,1,female,5,1,9,5,1,9
+152,Eric Weese,0,Disciplinary,1,male,5,1,10,5,1,6
+293,Leah Platt Boustan,0,Disciplinary,3,female,1,1,10,6,0,6
+436,Rohini Pande,1,Disciplinary,1,female,6,1,10,7,0,6
+349,Michael Peters,1,Disciplinary,2,male,1,2,10,8,1,7
+375,Nicholas Ryan,1,Disciplinary,2,male,1,2,10,7,3,7
+115,Daniel Keniston,0,Interdisciplinary,2,male,1,3,10,7,0,7
+140,Eduardo Morales,1,Disciplinary,1,male,1,0,11,5,1,8
+162,Ezra Oberfield,1,Disciplinary,1,male,1,0,11,7,3,8
+387,Owen M. Zidar,1,Disciplinary,1,male,1,0,11,6,0,5
+487,Sylvain Chassang,1,Disciplinary,2,male,5,0,11,7,0,5
+496,Thomas Fujiwara,1,Disciplinary,2,male,5,0,11,8,1,7
+126,David Silver,0,Disciplinary,2,male,1,1,11,9,1,5
+186,Gregor Jarosch,0,Disciplinary,1,male,1,1,11,7,2,5
+323,Markus K. Brunnermeier,1,Disciplinary,2,male,1,1,11,6,0,7
+354,Mikkel Plagborg-Møller,1,Disciplinary,3,male,1,1,11,7,1,6
+527,Wei Xiong,1,Interdisciplinary,3,male,5,1,11,8,0,5
+8,Adrien Matray,0,Disciplinary,2,male,1,2,11,6,0,9
+350,Michal Kolesár,1,Disciplinary,1,male,1,2,11,6,0,7
+56,Arlene Wong,0,Disciplinary,5,female,5,3,11,10,1,3
+3,Adam M. Guren,1,Disciplinary,2,male,4,1,12,6,0,7
+67,Ben Li,0,Disciplinary,3,male,5,1,12,7,0,8
+112,Danial Lashkari,0,Disciplinary,1,male,4,1,12,13,1,5
+203,Hiroaki Kaido,1,Disciplinary,2,male,5,1,12,7,0,8
+216,Ivan Fernandez-Val,1,Disciplinary,4,male,1,1,12,7,0,5
+227,Jawwad Noor,1,Disciplinary,3,male,6,1,12,8,0,6
+237,Jianjun Miao,1,Disciplinary,3,male,5,1,12,11,0,6
+244,Johannes F. Schmieder,1,Disciplinary,4,male,1,1,12,6,0,7
+266,Juan Ortner,1,Disciplinary,2,male,1,1,12,7,5,8
+309,Marc Rysman,1,Disciplinary,3,male,1,1,12,7,0,7
+442,S Anukriti,0,Disciplinary,2,female,6,1,12,11,0,7
+552,Zhongjun Qu,1,Disciplinary,2,male,5,1,12,7,0,8
+31,Andrei A. Levchenko,1,Disciplinary,2,male,1,0,13,5,4,5
+102,Christopher L. House,1,Disciplinary,1,male,1,0,13,9,0,7
+458,Sebastian Sotelo,1,Disciplinary,2,male,1,0,13,11,0,6
+6,Aditi Thapar,0,Disciplinary,2,female,6,1,13,7,0,6
+44,Andrés Blanco,0,Disciplinary,2,male,2,1,13,8,0,8
+62,Ashley C. Craig,0,Disciplinary,2,male,1,1,13,9,0,4
+119,David A. Miller,1,Disciplinary,1,male,1,1,13,9,0,13
+129,Dean Yang,1,Disciplinary,2,male,5,1,13,8,0,6
+169,Florian Gunsilius,0,Interdisciplinary,4,male,1,1,13,4,8,4
+241,Jing Cai,0,Interdisciplinary,1,female,5,1,13,8,0,4
+346,Michael G. Mueller-Smith,1,Interdisciplinary,3,male,1,1,13,9,2,7
+405,Peter William Newberry,0,Interdisciplinary,4,male,1,1,13,9,0,8
+450,Sara B. Heller,1,Disciplinary,3,female,1,1,13,11,0,11
+539,Ying Fan,1,Disciplinary,2,female,5,1,13,8,0,8
+100,Christopher Huckfeldt,0,Disciplinary,1,male,1,1,14,8,0,8
+105,Claire S.H. Lim,0,Disciplinary,3,female,5,1,14,6,0,10
+107,Colleen Carey,0,Interdisciplinary,2,female,1,1,14,9,2,8
+161,Evan Riehl,1,Disciplinary,3,male,1,1,14,9,0,7
+172,Francesca Molinari,1,Interdisciplinary,2,female,1,1,14,6,0,10
+245,John Cawley,1,Disciplinary,5,male,1,1,14,6,2,4
+267,Julieta Caunedo,1,Disciplinary,2,female,1,1,14,10,0,8
+280,Kristoffer P. Nimark,1,Disciplinary,2,male,1,1,14,4,3,14
+298,Levon Barseghyan,1,Disciplinary,2,male,4,1,14,8,0,8
+307,Mallika Thomas,0,Disciplinary,5,female,6,1,14,8,0,6
+345,Michael F. Lovenheim,1,Disciplinary,3,male,1,1,14,7,2,4
+374,Nicholas J. Sanders,1,Disciplinary,2,male,1,1,14,8,2,11
+553,Zhuan Pei,1,Disciplinary,3,male,5,1,14,6,1,7
+212,Isabelle Brocas,1,Disciplinary,4,female,1,0,15,4,6,7
+287,Ladan Masoudie,1,Disciplinary,8,female,1,0,15,9,6,7
+28,Anant Nyshadham,0,Disciplinary,2,male,6,1,15,6,0,3
+51,Antonio Miguel R. Bento,1,Disciplinary,3,male,1,1,15,4,0,7
+113,Daniel Bennett,1,Disciplinary,2,male,1,1,15,7,0,13
+182,Giorgio Coricelli,1,Interdisciplinary,5,male,1,1,15,7,8,2
+191,Guillaume Vandenbroucke,0,Disciplinary,2,male,1,1,15,3,0,7
+205,Hyungsik Roger Moon,1,Disciplinary,3,male,5,1,15,9,0,6
+243,Joel M. David,0,Disciplinary,2,male,1,1,15,10,0,7
+294,Leandro Carvalho,1,Disciplinary,3,male,1,1,15,9,6,7
+467,Silvia Helena Barcellos,1,Disciplinary,3,female,1,1,15,8,9,3
+472,Simone G. Schaner,1,Disciplinary,2,female,1,1,15,12,3,4
+314,Marco Angrisani,1,Interdisciplinary,4,male,1,2,15,9,9,4
+397,Paulina Oliva,1,Disciplinary,3,female,1,2,15,5,0,7
+59,Arthur Blouin,1,Disciplinary,2,male,1,0,16,10,0,10
+135,Diego Restuccia,1,Disciplinary,3,male,1,0,16,7,0,6
+157,Ettore Damiano,1,Disciplinary,2,male,4,0,16,6,0,6
+192,Gustavo J. Bobonis,1,Interdisciplinary,2,male,1,0,16,5,0,6
+259,Jordi Mondria,1,Disciplinary,2,male,1,0,16,5,0,7
+313,Marcin Pęski,1,Disciplinary,2,male,1,0,16,5,0,6
+328,Martin Burda,1,Disciplinary,4,male,1,0,16,7,0,7
+403,Peter Morrow,1,Disciplinary,2,male,1,0,16,9,0,7
+406,Philip Oreopoulos,1,Disciplinary,2,male,1,0,16,7,0,5
+531,Xianwen Shi,1,Disciplinary,3,male,5,0,16,11,0,6
+87,Carlos Serrano,0,Disciplinary,3,male,1,1,16,7,0,6
+104,Chuan Goh,0,Interdisciplinary,3,male,5,1,16,6,0,7
+238,Jiaying Gu,1,Disciplinary,3,female,5,1,16,9,0,8
+240,Jim Goldman,0,Disciplinary,3,male,1,1,16,18,0,5
+249,Jonathan Beauchamp,0,Disciplinary,4,male,1,1,16,6,5,8
+269,Junichi Suzuki,0,Disciplinary,3,male,5,1,16,11,0,8
+279,Kory Kroft,1,Disciplinary,1,male,1,1,16,7,4,6
+281,Kunal Dasgupta,0,Disciplinary,2,male,6,1,16,8,8,5
+315,Margarida Duarte,1,Disciplinary,3,female,1,1,16,8,5,3
+359,Mons Chan,0,Disciplinary,3,male,1,1,16,8,1,5
+369,Nathanael Vellekoop,0,Disciplinary,3,male,1,1,16,8,0,6
+401,Peter Cziraki,0,Disciplinary,3,male,1,1,16,6,0,11
+456,Sebastian Dyrda,1,Disciplinary,3,male,1,1,16,6,0,9
+463,Shari Eli,1,Disciplinary,3,female,4,1,16,6,0,9
+540,Yingnan Zhao,0,Disciplinary,9,female,5,1,16,6,0,7
+419,Rahul Deb,1,Disciplinary,2,male,6,1,16,6,0,7
+114,Daniel Grodzicki,0,Disciplinary,6,male,1,1,17,8,0,8
+201,Henrique De Oliveira,0,Disciplinary,6,male,2,1,17,6,1,5
+277,Keisuke Hirano,1,Interdisciplinary,2,male,5,1,17,6,0,3
+379,Nima Haghpanah,1,Disciplinary,3,male,4,1,17,7,2,7
+392,Patrik Guggenberger,1,Disciplinary,3,male,1,1,17,7,0,6
+394,Paul L. E. Grieco,1,Interdisciplinary,3,male,1,1,17,8,0,6
+483,Sung Jae Jun,1,Disciplinary,3,male,5,1,17,7,0,6
+421,Ran Shorrer,1,Disciplinary,3,male,4,2,17,7,1,8
+549,Yuhta Ishii,1,Disciplinary,2,female,5,2,17,6,1,9
+137,Domenico Ferraro,1,Disciplinary,2,male,1,0,18,9,0,9
+366,Natalia Kovrijnykh,1,Disciplinary,2,female,1,0,18,12,0,8
+178,Galina Vereshchagina,1,Disciplinary,2,female,1,1,18,6,0,10
+251,Jonathan D. Ketcham,1,Disciplinary,4,male,4,1,18,5,3,5
+376,Nicolai V. Kuminoff,1,Disciplinary,3,male,1,1,18,7,0,10
+22,Alvin D. Murphy,1,Disciplinary,2,male,1,3,18,8,0,10
+21,Allan Collard-Wexler,1,Disciplinary,1,male,1,0,19,7,-1,8
+65,Attila Ambrus,1,Disciplinary,1,male,1,0,19,9,0,4
+109,Cosmin L. Ilut,1,Disciplinary,1,male,1,0,19,7,0,9
+223,James W. Roberts,1,Disciplinary,2,male,1,0,19,5,1,4
+283,Kyle Jurado,1,Disciplinary,1,male,1,0,19,7,0,9
+400,Peter Arcidiacono,1,Disciplinary,2,male,1,0,19,6,0,7
+407,Philipp Sadowski,1,Disciplinary,2,male,1,0,19,6,0,6
+418,Rafael Dix-Carneiro,1,Disciplinary,3,male,1,0,19,8,2,6
+58,Arnaud Maurel,1,Disciplinary,1,male,4,1,19,6,1,9
+204,Hugh Macartney,0,Disciplinary,3,male,1,1,19,8,0,10
+224,Jaromir B. Nosal,0,Disciplinary,3,male,1,1,19,6.5,0,7.5
+335,Matthias Kehrig,1,Disciplinary,1,male,1,1,19,2,4,10
+538,Yi (Daniel) Xu,1,Disciplinary,1,female,5,1,19,8,0,6
+357,Modibo Sidibe,0,Disciplinary,3,male,3,2,19,7,2,6
+532,Xiao Yu Wang,0,Disciplinary,2,female,5,3,19,6,0,7
+54,Ariel Tomas Burstein,1,Disciplinary,2,male,4,0,20,5,0,7
+131,Denis Chetverikov,1,Disciplinary,2,male,1,0,20,6,0,6
+228,Jay Lu,1,Disciplinary,2,male,5,0,20,8,0,6
+256,Jonathan Vogel,1,Disciplinary,2,male,1,0,20,6,0,7
+326,Martin Benjamin Hackmann,1,Disciplinary,1,male,1,0,20,7,0,10
+337,Maurizio Mazzocco,1,Disciplinary,1,male,1,0,20,7,0,7
+409,Pierre-Olivier Weill,1,Disciplinary,2,male,1,0,20,7,0,6
+470,Simon Board,1,Disciplinary,2,male,1,0,20,7,0,8
+32,Andres Santos,1,Interdisciplinary,3,male,1,1,20,7,0,5
+124,David R. Baqaee,1,Disciplinary,1,male,4,1,20,5,0,3
+173,Francois Geerolf,0,Disciplinary,8,male,1,1,20,4,1,8
+206,Ichiro Obara,1,Disciplinary,2,male,5,1,20,7,0,7
+352,Michela Giorcelli,1,Disciplinary,2,female,1,1,20,8,0,6
+360,Moritz Meyer-ter-Vehn,1,Disciplinary,2,male,1,1,20,5,4,8
+367,Natalie Bau,1,Disciplinary,1,female,1,1,20,6,0,3
+388,Pablo Fajgelbaum,1,Disciplinary,1,male,4,1,20,7,0,6
+435,Rodrigo Pinto,0,Disciplinary,5,male,2,1,20,13,1,8
+444,Saki Bigio,1,Disciplinary,1,male,1,1,20,9,0,10
+508,Tomasz Sadzik,1,Disciplinary,2,male,1,1,20,5,0,4
+551,Zhipeng Liao,1,Disciplinary,2,male,5,2,20,10,0,7
+164,Fatih Guvenen,1,Disciplinary,2,male,4,0,21,6,0,6
+317,Mariacristina De Nardi,1,Disciplinary,2,female,1,0,21,6,1,5
+46,Anmol Bhandari,1,Disciplinary,1,male,6,1,21,10,1,7
+53,Anusha Nath,0,Interdisciplinary,5,female,6,1,21,11,0,7
+197,Hannes Malmberg,1,Interdisciplinary,3,male,1,1,21,7,1,6
+282,Kyle Herkenhoff,1,Disciplinary,1,male,1,1,21,6,1,7
+189,Grey Gordon,0,Disciplinary,2,male,1,0,22,6,0,7
+372,Nicholas A. Snow,0,Disciplinary,6,male,1,0,22,6,2,10
+478,Stefan Weiergraeber,0,Disciplinary,2,male,1,0,22,6,0,9
+10,Ahmad Lashkaripour,1,Disciplinary,2,male,6,1,22,7,0,8
+96,Christian Matthes,1,Disciplinary,3,male,1,1,22,6,0,3
+118,Daniela Puzzello,1,Disciplinary,2,female,1,1,22,7,0,5
+145,Emerson Melo,1,Disciplinary,2,male,1,1,22,9,2,7
+193,Gustavo Torrens,1,Disciplinary,3,male,1,1,22,10,0,8
+275,Ke-Li Xu,1,Disciplinary,3,male,5,1,22,7,0,5
+336,Mauricio Drelichman,1,Disciplinary,2,male,4,1,22,7,0,8
+50,Antonio Doblas-Madrid,1,Disciplinary,4,male,1,0,23,7,1,9
+9,Aeimit Lakdawala,0,Disciplinary,2,male,1,1,23,6,0,9
+13,Ajin Lee,0,Disciplinary,3,female,5,1,23,6,0,7
+55,Arijit Mukherjee,1,Disciplinary,3,male,6,1,23,7,3,6
+90,Ce Liu,0,Disciplinary,3,male,5,1,23,6,0,5
+97,Christian R. Ahlin,1,Disciplinary,2,male,1,1,23,6,0,8
+198,Hanzhe Zhang,1,Disciplinary,4,male,5,1,23,5,0,8
+292,Leah K. Lakdawala,0,Disciplinary,2,female,5,1,23,7,0,8
+386,Oren Ziv,0,Disciplinary,2,male,4,1,23,8,0,9
+422,Raoul Minetti,1,Disciplinary,2,male,1,1,23,6,0,6
+476,Soren T. Anderson,1,Disciplinary,3,male,1,1,23,7,0,7
+503,Ting Liu,0,Disciplinary,2,female,5,1,23,7,0,4
+506,Todd E. Elder,1,Disciplinary,3,male,1,1,23,7,0,9
+413,Prabhat Barnwal,1,Disciplinary,3,male,6,2,23,9,0,9
+1,Aaditya Dar,0,Disciplinary,3,male,6,1,24,11,1,3
+144,Emel Filiz-Ozbay,1,Disciplinary,2,male,4,1,24,9,0,7
+158,Eunhee Lee,0,Disciplinary,3,female,5,1,24,6,0,7
+167,Felipe E. Saffie,0,Disciplinary,2,male,2,1,24,7,0,6
+181,Ginger Zhe Jin,1,Interdisciplinary,3,female,5,1,24,8,0,8
+234,Jessica A. Goldberg,1,Disciplinary,2,female,4,1,24,10,0,7
+286,L. Luminita Stevens,1,Disciplinary,3,female,1,1,24,9,0,8
+440,Ryan Decker,0,Disciplinary,7,male,1,1,24,5,0,7
+443,S. Borağan Aruoba,1,Disciplinary,3,male,4,1,24,5,0,7
+474,Soohyung Lee,0,Disciplinary,2,female,5,1,24,10,0,8
+155,Ethan Kaplan,1,Interdisciplinary,3,male,4,2,24,13,0,6
+341,Melissa S. Kearney,1,Disciplinary,3,female,1,2,24,6,4,3
+383,Nolan G. Pope,1,Disciplinary,2,male,1,2,24,6,0,7
+460,Sergio Urzua,1,Disciplinary,3,male,1,2,24,7,0,9
+33,Andrew Christopher Barr,1,Disciplinary,2,male,4,0,25,8,0,3
+253,Jonathan Meer,1,Disciplinary,3,male,6,0,25,7,0,5
+466,Silvana Krasteva,1,Disciplinary,3,female,1,0,25,5,0,7
+168,Fernando A. Luco,1,Disciplinary,2,male,1,1,25,8,0,7
+398,Pedro Bento,1,Disciplinary,3,male,1,1,25,7,0,8
+453,Sarah Zubairy,1,Disciplinary,2,female,4,1,25,6,3,5
+480,Steven L. Puller,1,Disciplinary,2,male,1,1,25,8,0,7
+544,Yonghong An,1,Disciplinary,3,male,5,1,25,6,0,7
+550,Yuzhe Zhang,1,Disciplinary,3,male,5,1,25,6,0,5
+491,Tatevik Sekhposyan,1,Disciplinary,4,female,4,2,25,9,4,4
+285,Kyungchul Song,1,Interdisciplinary,3,male,5,0,26,7,0,6
+473,Siwan Anderson,1,Disciplinary,5,female,1,0,26,6,2,9
+522,Viktoria Hnatkovska,1,Disciplinary,2,female,1,0,26,6,0,7
+351,Michal Szkup,1,Disciplinary,2,male,1,1,26,7,0,9
+368,Nathan Nunn,1,Disciplinary,2,male,1,1,26,7,0,2
+500,Thorsten Rogall,0,Disciplinary,6,male,1,1,26,8,1,4
+515,Vadim Marmer,1,Disciplinary,3,male,1,1,26,9,0,7
+526,Wei Li,1,Disciplinary,2,female,5,1,26,7,0,5
+170,Florian Hoffmann,1,Disciplinary,3,male,1,2,26,6,0,9
+320,Marit Rehavi,1,Disciplinary,4,female,4,2,26,7,2,7
+523,Vitor Farinha Luz,1,Disciplinary,2,male,6,3,26,8,1,8
+134,Diego Anzoategui,0,Disciplinary,2,male,2,1,27,11,0,6
+248,John Landon-Lane,1,Disciplinary,3,male,1,1,27,5,3,8
+534,Xiye Yang,1,Disciplinary,3,male,5,1,27,6,0,7
+76,Bingxiao Wu,1,Disciplinary,3,female,5,2,27,5,0,11
+142,Eliza C. Forsythe,1,Disciplinary,3,female,1,0,28,6,0,9
+236,Ji Hyung Lee,1,Interdisciplinary,3,male,5,0,28,8,0,11
+4,Adam Osman,1,Disciplinary,3,male,4,1,28,7,0,9
+35,Andrew Garin,0,Disciplinary,3,male,1,1,28,9,1,5
+159,Eunyi Chung,1,Interdisciplinary,3,female,5,1,28,7,1,10
+261,Jorge Lemus,1,Disciplinary,3,male,4,1,28,6,0,6
+461,Seung-Hyun Hong,1,Disciplinary,3,male,5,1,28,6,0,7
+321,Mark Borgschulte,1,Disciplinary,3,male,1,2,28,10,1,9
+177,Gaetano Antinolfi,1,Disciplinary,3,male,1,0,29,5,0,7
+213,Ismael Y. Mourifi�,1,Interdisciplinary,3,male,3,0,29,9,0,7
+446,SangMok Lee,1,Disciplinary,3,male,5,0,29,8,0,5
+482,Sukkoo Kim,1,Interdisciplinary,3,male,5,0,29,7,0,14
+545,Yongseok Shin,1,Disciplinary,4,male,5,0,29,5,0,5
+27,Ana Babus,1,Disciplinary,3,female,1,1,29,6,3,12
+79,Brendan Kline,1,Disciplinary,1,male,1,0,30,7,0,6
+98,Christoph Boehm,1,Disciplinary,2,male,1,0,30,8,1,7
+195,Haiqing Xu,1,Disciplinary,3,male,5,0,30,11,0,7
+318,Marika Cabral,1,Disciplinary,1,female,1,0,30,5,0,9
+385,Olivier Coibion,1,Disciplinary,1,male,1,0,30,8,0,8
+485,Svetlana Boyarchenko,1,Disciplinary,4,female,1,0,30,23,0,6
+498,Thomas Wiseman,1,Disciplinary,2,male,4,0,30,5,0,8
+88,Caroline D. Thomas,1,Disciplinary,3,female,1,1,30,8,0,8
+128,Dean Spears,1,Disciplinary,3,male,1,1,30,7,4,7
+347,Michael Geruso,1,Disciplinary,2,male,4,1,30,9,0,8
+382,Nitya Pandalai-Nayar,1,Disciplinary,2,female,6,1,30,9,1,7
+428,Richard J. Murphy,1,Disciplinary,3,male,1,1,30,11,0,10
+454,Saroj Bhattarai,1,Disciplinary,2,male,6,1,30,5,0,11
+296,Leigh L. Linden,1,Disciplinary,1,male,1,2,30,7,0,7
+116,Daniel Kreisman,1,Disciplinary,3,male,4,0,31,7,7,6
+222,James Marton,1,Disciplinary,4,male,1,0,31,6,0,5
+25,Amy E. Eremionkhale,0,Disciplinary,6,female,1,1,31,8,1,4
+71,Benjamin M. Marx,1,Disciplinary,2,male,1,1,31,13,0,7
+86,Carlianne E. Patrick,1,Interdisciplinary,4,female,1,1,31,12,0,8
+91,Celine Boulenger,0,Disciplinary,9,female,1,1,31,5,0,6
+179,Garth Heutel,1,Disciplinary,3,male,1,1,31,7,2,8
+185,Goncalo Monteiro,1,Disciplinary,4,male,1,1,31,7,3,10
+246,John D. Gibson,0,Disciplinary,4,male,1,1,31,7,0,6
+284,Kyle Mangum,0,Disciplinary,2,male,1,1,31,7,0,6
+408,Pierre Nguimkeu,1,Disciplinary,4,male,3,1,31,7,0,6
+41,Andrey Timofeev,1,Disciplinary,6,male,1,2,31,9,7,12
+439,Rusty Tchernis,1,Disciplinary,3,male,1,2,31,8,2,5
+254,Jonathan Smith,1,Disciplinary,2,male,1,3,31,9,6,4
+525,Vjollca Sadiraj,1,Interdisciplinary,3,female,1,3,31,13,4,7
+344,Michael D. Grubb,1,Disciplinary,3,male,1,0,32,7,6,3
+438,Rosen Valchev,1,Disciplinary,1,male,1,0,32,6,0,8
+493,Theodore Papageorgiou,1,Disciplinary,2,male,4,0,32,6,0,11
+425,Raymond Fisman,1,Disciplinary,2,male,4,1,32,5,1,3
+432,Robert Ulbricht,1,Disciplinary,1,male,1,1,32,6,4,6
+429,Richard L. Sweeney,1,Disciplinary,2,male,1,2,32,11,0,8
+214,Itzik Fadlon,1,Disciplinary,2,male,4,1,33,8,1,6
+229,Jeffrey P. Clemens,1,Disciplinary,4,male,1,1,33,6,1,6
+273,Katherine Meckel,1,Disciplinary,2,female,1,1,33,8,1,7
+311,Marc-Andreas Muendler,1,Disciplinary,2,male,1,1,33,6,1,7
+322,Mark R. Jacobsen,1,Disciplinary,3,male,1,1,33,8,0,6
+395,Paul Niehaus,1,Disciplinary,2,male,1,1,33,5,0,6
+414,Prashant Bharadwaj,1,Disciplinary,3,male,6,1,33,5,0,6
+495,Thomas Baranga,0,Disciplinary,9,male,4,1,33,7,0,8
+510,Tommaso Porzio,0,Interdisciplinary,2,male,1,1,33,7,0,7
+542,Yixiao Sun,1,Disciplinary,2,male,5,1,33,5,4,6
+211,Isabel Trevino,1,Disciplinary,3,female,1,2,33,8,0,8
+271,Kaspar Wuthrich,1,Disciplinary,4,male,1,2,33,7,0,8
+43,Andrii Babii,1,Disciplinary,3,male,1,0,34,7,0,6
+52,Anusha Chari,1,Disciplinary,3,female,6,0,34,10,0,7
+81,Brian McManus,1,Disciplinary,2,male,1,0,34,5,0,6
+371,Neville Francis,1,Disciplinary,4,male,3,0,34,8,3,6
+404,Peter Reinhard Hansen,1,Disciplinary,3,male,1,0,34,7,0,7
+517,Valentin Verdier,1,Disciplinary,2,male,1,0,34,5,0,8
+257,Jonathan Williams,1,Interdisciplinary,3,male,1,1,34,6,0,8
+303,Lutz Hendricks,1,Disciplinary,2,male,1,1,34,8,0,9
+469,Simon Alder,0,Disciplinary,2,male,1,1,34,6,0,7
+477,Stanislav Rabinovich,1,Disciplinary,2,male,1,1,34,6,0,11
+504,Toan Phan,0,Disciplinary,2,male,5,1,34,6,0,5
+23,Amalia R. Miller,1,Disciplinary,4,female,1,0,35,5,0,6
+297,Leland E. Farmer,1,Disciplinary,2,male,1,0,35,6,0,7
+36,Andrew Kloosterman,0,Disciplinary,3,male,1,1,35,9,1,5
+89,Carter A. Doyle,1,Disciplinary,8,male,1,1,35,7,0,17
+139,Dukpa Kim,0,Disciplinary,3,male,5,1,35,10,0,8
+149,Eric R. Young,1,Disciplinary,3,male,5,1,35,7,0,9
+165,Federico Ciliberto,1,Disciplinary,3,male,1,1,35,8,0,10
+202,Hernan J. Moscoso Boedo,0,Disciplinary,3,male,2,1,35,7,0,8
+220,Jae Won Lee,0,Disciplinary,3,male,5,1,35,5,0,5
+288,Latchezar Popov,0,Disciplinary,5,male,1,1,35,9,0,8
+464,Sheetal Sekhri,1,Disciplinary,3,female,6,1,35,11,0,7
+475,Sophie Osotimehin,0,Disciplinary,2,female,3,1,35,8,1,6
+250,Jonathan Colmer,1,Disciplinary,3,male,1,2,35,6,0,8
+310,Marc Santugini,1,Interdisciplinary,4,male,2,2,35,8,0,6
+402,Peter G. Troyan,1,Disciplinary,2,male,1,2,35,6,0,6
+452,Sarah E. Turner,1,Interdisciplinary,4,female,1,2,35,8,0,6
+132,Denis Nekipelov,1,Disciplinary,3,male,1,3,35,10,0,6
+417,Rachel Heath,1,Disciplinary,2,female,1,0,36,6,0,7
+80,Brian Dillon,0,Disciplinary,3,male,1,1,36,11,2,5
+163,Fabio Ghironi,1,Disciplinary,2,male,1,1,36,6,2,6
+200,Hendrik Wolff,0,Disciplinary,3,male,1,1,36,10,0,9
+361,Mu-Jeung Yang,0,Disciplinary,3,male,5,1,36,6,0,8
+384,Oksana Leukhina,0,Disciplinary,3,female,1,1,36,5,0,5
+535,Xu Tan,1,Disciplinary,2,male,5,1,36,6,0,7
+548,Yu-chin Chen,1,Disciplinary,3,female,5,2,36,9,1,9
+225,Jason T. Kerwin,1,Disciplinary,3,male,1,4,36,8,0,9
+42,Andriana Bellou,1,Disciplinary,3,female,1,0,37,6,0,7
+133,Deniz Dizdar,1,Disciplinary,3,male,4,0,37,8,1,7
+319,Marine Carrasco,1,Interdisciplinary,4,female,1,0,37,4,1,9
+331,Massimiliano Amarante,1,Disciplinary,3,male,1,0,37,6,0,6
+377,Nicolas Klein,1,Disciplinary,2,male,1,0,37,5,2,7
+423,Raphael Godefroy,1,Interdisciplinary,2,male,1,0,37,6,3,7
+455,Sean Horan,1,Disciplinary,3,male,1,0,37,13,-1,10
+528,William J. McCausland,1,Disciplinary,4,male,1,0,37,13,-1,8
+519,Vasia Panousi,0,Disciplinary,2,female,1,1,37,7,8,6
+14,Alan T. Sorensen,1,Disciplinary,2,male,1,0,38,4,0,8
+92,Chao Fu,1,Disciplinary,2,female,5,0,38,8,0,8
+108,Corina Mommaerts,1,Disciplinary,3,female,1,0,38,8,1,7
+233,Jesse Gregory,1,Disciplinary,3,female,1,0,38,9,0,7
+290,Laura Schechter,1,Disciplinary,2,female,1,0,38,9,0,9
+365,Naoki Aizawa,1,Disciplinary,2,male,5,0,38,10,0,9
+424,Rasmus Lentz,1,Disciplinary,3,male,1,0,38,7,0,7
+533,Xiaoxia Shi,1,Disciplinary,3,female,5,0,38,9,0,6
+30,Ananth Seshadri,1,Disciplinary,2,male,6,1,38,5,5,0
+101,Christopher John Sullivan,0,Disciplinary,2,male,1,1,38,8,0,7
+147,Enghin Atalay,0,Disciplinary,2,male,4,1,38,9,1,5
+330,Marzena J. Rostek,1,Disciplinary,3,female,1,1,38,7,0,6
+355,Mikkel Sølvsten,0,Disciplinary,2,male,1,1,38,7,0,5
+431,Rishabh Kirpalani,1,Disciplinary,1,male,6,1,38,6,0.5,5.5
+63,Ashley Swanson,1,Disciplinary,2,female,1,2,38,7,0,10
+117,Daniel Quint,1,Disciplinary,3,male,1,2,38,10,0,6
+278,Kim J. Ruhl,1,Disciplinary,2,male,1,2,38,5,0,12
+268,Jun Ma,1,Disciplinary,3,male,5,0,39,6,0,6
+468,Silvia Prina,1,Interdisciplinary,4,female,1,0,39,5,0,6
+20,Alicia Sasser Modestino,1,Interdisciplinary,4,female,1,1,39,8,3,10
+75,Bilge Erten,1,Disciplinary,2,female,4,1,39,6,0,11
+217,Ivan Petkov,0,Interdisciplinary,3,male,1,1,39,7.4,0,7.2
+332,Matthew B. Ross,1,Disciplinary,3,male,1,1,39,5,4,2
+356,Mindy S. Marks,1,Disciplinary,3,female,1,1,39,6,0,7
+381,Nishith Prakash,1,Disciplinary,3,male,6,1,39,8,0,10
+448,Santiago Caicedo,1,Disciplinary,2,male,2,1,39,8,4,2
+209,Isaac McFarlin Jr.,0,Interdisciplinary,2,male,3,1,40,10,0,6
+226,Javier D. Donna,0,Disciplinary,2,male,1,1,40,4,0,8
+399,Perihan O. Saygin,0,Interdisciplinary,3,female,4,1,40,7,3,9
+497,Thomas Knight,1,Disciplinary,6,male,1,1,40,7,0,4
+69,Benjamin D. Williams,1,Interdisciplinary,3,male,1,0,41,6,0,8
+93,Chao Wei,1,Disciplinary,3,female,5,0,41,10,0,9
+141,Elira Kuka,1,Disciplinary,2,female,1,0,41,6,0,8
+433,Roberto Samaniego,1,Disciplinary,3,male,4,0,41,7,0,4
+507,Tomas Williams,1,Disciplinary,3,male,1,0,41,9,0,6
+83,Bryan A. Stuart,0,Disciplinary,2,male,1,1,41,6,0,5
+304,Maggie Xiaoyang Chen,1,Disciplinary,3,female,5,1,41,6,0,6
+393,Paul E. Carrillo,1,Disciplinary,3,male,1,1,41,8,0,7
+426,Remi C. Jedwab,1,Disciplinary,2,male,4,1,41,7,0,4
+489,Tara M. Sinclair,1,Disciplinary,3,female,1,1,41,9,0,6
+11,Ahmet Akyol,1,Disciplinary,3,male,4,0,42,7,0,10
+39,Andrey Semenov,1,Disciplinary,5,male,1,0,42,9,4,4
+40,Andrey Stoyanov,1,Disciplinary,3,male,1,0,42,7,0,5
+72,Benjamin MacLean Sand,1,Disciplinary,5,male,1,0,42,6,2,6
+94,Chaoran Chen,1,Disciplinary,2,male,5,0,42,7,0,7
+156,Etienne Lal�,1,Disciplinary,3,male,3,0,42,3,0,6
+190,Guido Matias Cortes,1,Disciplinary,3,male,1,0,42,7,5,3
+289,Laura Salisbury,1,Disciplinary,3,female,1,0,42,7,0,6
+459,Sel�uk �zyurt,1,Disciplinary,3,male,4,0,42,8,0,10
+490,Tasso Adamopoulos,1,Disciplinary,3,male,1,0,42,8,0,4
+514,Uros Petronijevic,1,Disciplinary,3,male,1,0,42,5,0,6
+73,Berta Esteve-Volart,1,Disciplinary,3,female,1,1,42,9,0,5
+370,Neil J. Buckley,1,Interdisciplinary,6,male,1,1,42,9,0,5
+2,Aaron Hedlund,1,Disciplinary,4,male,1,0,43,6,2,6
+49,Anson Soderbery,1,Disciplinary,3,male,1,0,43,5,0,6
+239,Jillian B. Carr,1,Disciplinary,3,female,1,0,43,6,0,9
+543,Yong Bao,1,Disciplinary,3,male,5,0,43,6,0,4
+68,Ben Zou,0,Disciplinary,2,male,5,1,43,9,0,7
+242,Joe Mazur,0,Disciplinary,7,male,1,1,43,8,0,9
+502,Timothy N. Bond,1,Disciplinary,2,male,1,1,43,5,0,7
+511,Trevor Gallen,0,Interdisciplinary,3,male,1,1,43,7,0,9
+537,Yaroslav Rosokha,1,Disciplinary,3,male,1,1,43,7,0,8
+29,Ananth Ramanarayanan,1,Disciplinary,2,male,6,0,44,5,4,9
+188,Gregory Pavlov,1,Disciplinary,3,male,1,0,44,8,0,9
+316,Maria Goltsman,1,Disciplinary,3,female,1,0,44,6,0,6
+471,Simona E. Cociuba,1,Disciplinary,2,female,1,0,44,6,4,9
+219,Jacob M. Short,0,Disciplinary,6,male,1,1,44,5,0,8
+260,Jorge Cruz Lopez,0,Disciplinary,5,male,1,1,44,9,0,10
+262,Joseph Lyon Mullins,0,Disciplinary,8,male,1,1,44,7,0,8
+462,Shahed Khan,0,Disciplinary,3,male,6,1,44,6,0,7
+547,Youngki Shin,0,Disciplinary,3,male,5,1,44,11,0,8
+120,David A. Rivers,1,Disciplinary,2,male,1,3,44,9,0,8
+64,Athanasios Geromichalos,1,Disciplinary,2,male,1,0,45,7,0,8
+85,Burkhard C. Schipper,1,Disciplinary,3,male,1,0,45,8,2,6
+125,David S. Rapson,1,Disciplinary,2,male,1,0,45,9,0,7
+184,Giovanni Peri,1,Disciplinary,3,male,1,0,45,6,0,8
+272,Katherine Eriksson,1,Disciplinary,3,female,1,0,45,9,0,8
+274,Katheryn (Kadee) Russ,1,Disciplinary,3,female,1,0,45,11,0,8
+207,Ina Simonovska,1,Disciplinary,2,female,1,1,45,5,0,7
+465,Shu Shen,1,Disciplinary,2,female,5,1,45,7,0,7
+488,Takuya Ura,1,Disciplinary,2,male,5,1,45,8,0,6
+449,Santiago Perez,1,Disciplinary,2,male,1,2,45,9,0,6
+78,Brantly Callaway,1,Disciplinary,3,male,1,0,46,9,0,7
+187,Gregorio Caetano,1,Disciplinary,3,male,1,0,46,9,0,9
+247,John L. Turner,1,Disciplinary,2,male,1,0,46,7,0,6
+264,Josh Kinsler,1,Disciplinary,2,male,1,0,46,8,0,10
+291,Laura V. Zimmermann,1,Disciplinary,3,female,1,0,46,6,0,7
+447,Santanu Chatterjee,1,Disciplinary,3,male,6,0,46,7,0,6
+334,Matthew Knepper,0,Disciplinary,3,male,1,1,46,6,5,4
+338,Meghan M. Skira,1,Disciplinary,3,female,4,1,46,5,0,6
+486,Svetlana Pashchenko,1,Disciplinary,3,female,1,1,46,8,0,13
+501,Tilman Klumpp,0,Disciplinary,3,male,1,1,46,7,-1,4
+437,Roozbeh Hosseini,1,Disciplinary,3,male,4,2,46,11,0,12
+74,Beyza Ural Marchand,1,Disciplinary,4,female,1,0,47,8,0,8
+136,Dmytro Hryshko,1,Disciplinary,2,male,1,0,47,7,0,6
+518,Valentina Galvani,1,Disciplinary,4,female,1,0,47,7,0,8
+34,Andrew Eckert,1,Interdisciplinary,4,male,1,1,47,6,1,6
+37,Andrew Leach,1,Interdisciplinary,4,male,6,1,47,6,2,5
+61,Ashantha Ranasinghe,1,Disciplinary,3,male,6,1,47,9,0,8
+95,Chetan Dave,1,Disciplinary,2,male,1,1,47,7,1,16
+111,Dana C. Andersen,1,Disciplinary,3,male,1,1,47,8,0,6
+123,David P. Brown,1,Disciplinary,3,male,1,1,47,5,0,5
+194,Haifang Huang,1,Interdisciplinary,3,male,5,1,47,10,0,4
+199,Heather Eckert,1,Disciplinary,3,female,1,1,47,6,0,10
+230,Jeffrey Penney,1,Disciplinary,3,male,1,1,47,9,0,8
+263,Joseph Marchand,1,Disciplinary,3,male,1,1,47,7,0,7
+299,Li Zhou,1,Disciplinary,3,female,5,1,47,9,0,7
+325,Martin Alfaro,1,Disciplinary,3,male,1,1,47,7,0,7
+410,Pinar Mine Gunes,1,Disciplinary,3,female,4,1,47,8,2,5
+457,Sebastian Fossati,1,Disciplinary,5,male,1,1,47,7,0,7
+520,Vera Brencic,1,Disciplinary,3,female,1,1,47,5,1,6
+536,Xuejuan Su,1,Disciplinary,3,female,5,1,47,7,0,12
+143,Elizabeth U. Cascio,1,Disciplinary,3,female,1,0,48,6,3,7
+150,Eric V. Edmonds,1,Disciplinary,3,male,1,0,48,6,0,6
+154,Ethan G. Lewis,1,Disciplinary,1,male,1,0,48,8,3,6
+221,James Feyrer,1,Disciplinary,3,male,1,0,48,11,0,7
+258,Jonathan Zinman,1,Disciplinary,2,male,4,0,48,9,3,4
+481,Steven Mello,0,Disciplinary,2,male,1,0,48,8,1,4
+380,Nina Pavcnik,1,Disciplinary,3,female,1,1,48,5,0,6
+396,Paul Novosad,1,Disciplinary,1,male,1,1,48,14,0,7
+499,Thomas Youle,0,Disciplinary,8,male,1,2,48,7,0,4
+196,Haizhen Lin,1,Disciplinary,3,female,5,0,49,7,0,7
+416,R. Andrew Butters,1,Disciplinary,3,male,1,0,49,7,0,0
+430,Rick Harbaugh,1,Disciplinary,2,male,1,0,49,11,7,6
+130,Deepal Basak,1,Disciplinary,1,male,4,1,49,6,0,8
+427,Ricardo Serrano-Padial,1,Disciplinary,3,male,1,1,50,9,0,8
+492,Teresa Harrison Drexel,1,Disciplinary,4,female,1,1,50,5,0,7
+546,Yoto V. Yotov,1,Disciplinary,2,male,4,1,50,5,0,6
+343,Mian Dai,1,Disciplinary,4,female,5,3,50,5,0,8
+512,Tristan Potter,1,Disciplinary,3,male,1,4,50,6,0,7
