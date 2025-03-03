@@ -48,7 +48,7 @@ p<-love.plot(bal.tab(psm_n),
 p<- p + xlab("SMD")
 
 p
-plot(psm_n, type = "density", interactive = FALSE,
+plot(psm_n, type = "density", interactive = FALSE,lv 
       which.xs = ~Journal_rank + Gender + Author.Position + Rank+ Ethnicity+BA_to_PHD+PHD_to_Fac+Fac_to_decision)
 ```
 
