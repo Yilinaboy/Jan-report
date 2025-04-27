@@ -137,6 +137,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./Full.html"> 
 <span class="menu-text">PSM- Full method</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Subclass.html"> 
+<span class="menu-text">PSM- Subclass method</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -200,67 +204,67 @@ matchit(formula = Econ_Index ~ Journal_rank + Gender + Author.Position +
 
 Summary of Balance for Matched Data:
                  Means Treated Means Control Std. Mean Diff. Var. Ratio
-distance                0.1508        0.1507          0.0010     0.9978
-Journal_rank1           0.0204        0.0000          0.1443          .
-Journal_rank2           0.2449        0.2551         -0.0237          .
-Journal_rank3           0.4286        0.4286          0.0000          .
-Journal_rank4           0.2449        0.2449          0.0000          .
-Journal_rank5           0.0408        0.0510         -0.0516          .
-Journal_rank6           0.0204        0.0204          0.0000          .
+distance                0.1980        0.1843          0.1135     1.5832
+Journal_rank1           0.0000        0.0000          0.0000          .
+Journal_rank2           0.2456        0.2281          0.0408          .
+Journal_rank3           0.4912        0.5263         -0.0702          .
+Journal_rank4           0.1579        0.1667         -0.0241          .
+Journal_rank5           0.0526        0.0439          0.0393          .
+Journal_rank6           0.0526        0.0351          0.0786          .
 Journal_rank7           0.0000        0.0000          0.0000          .
 Journal_rank8           0.0000        0.0000          0.0000          .
 Journal_rank9           0.0000        0.0000          0.0000          .
-Genderfemale            0.3061        0.3265         -0.0443          .
-Gendermale              0.6939        0.6735          0.0443          .
-Author.Position0        0.2653        0.2653          0.0000          .
-Author.Position1        0.6122        0.6224         -0.0209          .
-Author.Position2        0.0816        0.0714          0.0373          .
-Author.Position3        0.0408        0.0408          0.0000          .
+Genderfemale            0.2982        0.3421         -0.0959          .
+Gendermale              0.7018        0.6579          0.0959          .
+Author.Position0        0.1228        0.1579         -0.1069          .
+Author.Position1        0.6842        0.6491          0.0755          .
+Author.Position2        0.1754        0.1842         -0.0231          .
+Author.Position3        0.0175        0.0088          0.0668          .
 Author.Position4        0.0000        0.0000          0.0000          .
-Rank                   24.8163       26.4082         -0.1212     0.9819
-Ethnicity1              0.6531        0.6735         -0.0429          .
-Ethnicity2              0.0204        0.0204          0.0000          .
-Ethnicity3              0.0408        0.0102          0.1547          .
-Ethnicity4              0.0408        0.0510         -0.0516          .
-Ethnicity5              0.2041        0.2347         -0.0760          .
-Ethnicity6              0.0408        0.0102          0.1547          .
-BA_to_PHD               7.5592        7.6735         -0.0539     0.5819
-PHD_to_Fac              1.0408        0.8469          0.0906     1.4779
-Fac_to_decision         6.8000        6.7551          0.0210     0.9666
+Rank                   28.6842       29.2333         -0.0407     1.0125
+Ethnicity1              0.6316        0.6579         -0.0546          .
+Ethnicity2              0.0175        0.0088          0.0668          .
+Ethnicity3              0.0175        0.0439         -0.2004          .
+Ethnicity4              0.0877        0.0789          0.0310          .
+Ethnicity5              0.1579        0.1579          0.0000          .
+Ethnicity6              0.0877        0.0526          0.1240          .
+BA_to_PHD               7.1123        7.1579         -0.0239     1.0285
+PHD_to_Fac              1.1930        1.1140          0.0333     1.5002
+Fac_to_decision         6.5649        6.5702         -0.0025     0.8880
                  eCDF Mean eCDF Max Std. Pair Dist.
-distance            0.0033   0.0408          0.0355
-Journal_rank1       0.0204   0.0204          0.1443
-Journal_rank2       0.0102   0.0102          0.4983
-Journal_rank3       0.0000   0.0000          0.3673
-Journal_rank4       0.0000   0.0000          0.1837
-Journal_rank5       0.0102   0.0102          0.4641
-Journal_rank6       0.0000   0.0000          0.0408
+distance            0.0057   0.1053          0.1213
+Journal_rank1       0.0000   0.0000          0.0000
+Journal_rank2       0.0175   0.0175          0.4076
+Journal_rank3       0.0351   0.0351          0.7019
+Journal_rank4       0.0088   0.0088          0.5533
+Journal_rank5       0.0088   0.0088          0.4321
+Journal_rank6       0.0175   0.0175          0.2357
 Journal_rank7       0.0000   0.0000          0.0000
 Journal_rank8       0.0000   0.0000          0.0000
 Journal_rank9       0.0000   0.0000          0.0000
-Genderfemale        0.0204   0.0204          0.8413
-Gendermale          0.0204   0.0204          0.8413
-Author.Position0    0.0000   0.0000          0.3469
-Author.Position1    0.0102   0.0102          1.0262
-Author.Position2    0.0102   0.0102          0.4099
-Author.Position3    0.0000   0.0000          0.0816
+Genderfemale        0.0439   0.0439          0.9012
+Gendermale          0.0439   0.0439          0.9012
+Author.Position0    0.0351   0.0351          0.3207
+Author.Position1    0.0351   0.0351          0.6794
+Author.Position2    0.0088   0.0088          0.5766
+Author.Position3    0.0088   0.0088          0.2004
 Author.Position4    0.0000   0.0000          0.0000
-Rank                0.0400   0.1327          1.0462
-Ethnicity1          0.0204   0.0204          0.7289
-Ethnicity2          0.0000   0.0000          0.0204
-Ethnicity3          0.0306   0.0306          0.2579
-Ethnicity4          0.0102   0.0102          0.4641
-Ethnicity5          0.0306   0.0306          0.7342
-Ethnicity6          0.0306   0.0306          0.2579
-BA_to_PHD           0.0255   0.0714          1.1453
-PHD_to_Fac          0.0196   0.0510          0.7294
-Fac_to_decision     0.0153   0.0612          1.0579
+Rank                0.0248   0.1140          1.0447
+Ethnicity1          0.0263   0.0263          0.8911
+Ethnicity2          0.0088   0.0088          0.2004
+Ethnicity3          0.0263   0.0263          0.4677
+Ethnicity4          0.0088   0.0088          0.5271
+Ethnicity5          0.0000   0.0000          0.2807
+Ethnicity6          0.0351   0.0351          0.4341
+BA_to_PHD           0.0195   0.0789          1.0677
+PHD_to_Fac          0.0256   0.0614          0.7732
+Fac_to_decision     0.0127   0.0351          1.0223
 
 Sample Sizes:
           Control Treated
-All           504      49
-Matched        98      49
-Unmatched     406       0
+All           496      57
+Matched       114      57
+Unmatched     382       0
 Discarded       0       0</code></pre>
 </div>
 </div>
@@ -331,38 +335,39 @@ glm(formula = tenure ~ Econ_Index + Journal_rank + Gender + Author.Position +
 
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--2.1277   0.0000   0.4492   0.7435   1.5949  
+-2.5143   0.2998   0.5305   0.6898   1.4130  
 
 Coefficients:
-                              Estimate Std. Error z value Pr(&gt;|z|)
-(Intercept)                  6.079e+00  1.210e+03   0.005    0.996
-Econ_IndexInterdisciplinary -4.018e-01  4.706e-01  -0.854    0.393
-Journal_rank.L               1.027e+01  3.898e+03   0.003    0.998
-Journal_rank.Q              -1.169e+01  3.558e+03  -0.003    0.997
-Journal_rank.C               6.971e+00  2.431e+03   0.003    0.998
-Journal_rank^4              -2.461e+00  1.233e+03  -0.002    0.998
-Journal_rank^5               1.430e+00  4.109e+02   0.003    0.997
-Gendermale                   8.853e-02  5.072e-01   0.175    0.861
-Author.Position.L            5.293e+00  4.758e+02   0.011    0.991
-Author.Position.Q           -1.500e+01  1.064e+03  -0.014    0.989
-Author.Position.C           -2.161e+01  1.427e+03  -0.015    0.988
-Rank                         1.294e-02  1.790e-02   0.723    0.470
-Ethnicity2                  -1.694e+01  1.487e+03  -0.011    0.991
-Ethnicity3                  -6.411e-01  1.464e+00  -0.438    0.661
-Ethnicity4                  -1.166e-01  1.226e+00  -0.095    0.924
-Ethnicity5                   1.246e-01  5.657e-01   0.220    0.826
-Ethnicity6                   4.185e-01  1.588e+00   0.264    0.792
-BA_to_PHD                   -1.794e-03  1.084e-01  -0.017    0.987
-PHD_to_Fac                   1.075e-01  1.547e-01   0.695    0.487
-Fac_to_decision             -1.684e-01  1.144e-01  -1.472    0.141
+                              Estimate Std. Error z value Pr(&gt;|z|)  
+(Intercept)                    5.58433  393.88598   0.014   0.9887  
+Econ_IndexInterdisciplinary    0.62005    0.46170   1.343   0.1793  
+Journal_rank.L                -1.12793    0.68170  -1.655   0.0980 .
+Journal_rank.Q                -0.93232    0.63584  -1.466   0.1426  
+Journal_rank.C                 0.42366    0.62182   0.681   0.4957  
+Journal_rank^4                 0.33338    0.60273   0.553   0.5802  
+Gendermale                    -0.21223    0.46506  -0.456   0.6481  
+Author.Position.L             10.15076 1056.90251   0.010   0.9923  
+Author.Position.Q              7.84176  787.76865   0.010   0.9921  
+Author.Position.C              3.67240  352.30102   0.010   0.9917  
+Rank                           0.01265    0.01626   0.778   0.4365  
+Ethnicity2                   -16.60607 1693.35594  -0.010   0.9922  
+Ethnicity3                    -1.54298    0.89082  -1.732   0.0833 .
+Ethnicity4                     1.10398    1.09141   1.012   0.3118  
+Ethnicity5                    -0.40926    0.57662  -0.710   0.4779  
+Ethnicity6                    -0.95977    0.74336  -1.291   0.1967  
+BA_to_PHD                     -0.10369    0.10991  -0.943   0.3455  
+PHD_to_Fac                    -0.02535    0.10199  -0.249   0.8037  
+Fac_to_decision               -0.05499    0.09867  -0.557   0.5773  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 163.66  on 146  degrees of freedom
-Residual deviance: 125.92  on 127  degrees of freedom
-AIC: 165.92
+    Null deviance: 181.16  on 170  degrees of freedom
+Residual deviance: 156.70  on 152  degrees of freedom
+AIC: 194.7
 
-Number of Fisher Scoring iterations: 17</code></pre>
+Number of Fisher Scoring iterations: 15</code></pre>
 </div>
 </div>
 

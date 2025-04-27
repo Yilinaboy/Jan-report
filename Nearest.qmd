@@ -38,18 +38,14 @@ The visualization of the output is in the following:
 
 ```{r}
 #| echo: TRUE
-p<-love.plot(bal.tab(psm_n),
-          stat=c('m'),
+love.plot(bal.tab(psm_n),
+          stat=c('m','v'),
           grid=TRUE,
-          size=2,
-          stars="std" ,
-          sample.names=c("matched", "unmatched"),
-          threshold=c(m=.25))
-p<- p + xlab("SMD")
+          threshold=c(m=.25, v=1.25))
 
-p
-plot(psm_n, type = "density", interactive = FALSE,lv 
+plot(psm_n, type = "density", interactive = FALSE,
       which.xs = ~Journal_rank + Gender + Author.Position + Rank+ Ethnicity+BA_to_PHD+PHD_to_Fac+Fac_to_decision)
+  
 ```
 
 ## Summary of Logistic Regression 

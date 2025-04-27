@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-28">
+<meta name="dcterms.date" content="2025-04-27">
 
 <title>Summary of the Data – January Report</title>
 <style>
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 28, 2025</p>
+      <p class="date">April 27, 2025</p>
     </div>
   </div>
   
@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)   </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'lme4'</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>final_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'final.csv'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>final_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'finalhaha.csv'</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>final_data<span class="sc">$</span>Gender <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(final_data<span class="sc">$</span>Gender)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>final_data<span class="sc">$</span>Ethnicity <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(final_data<span class="sc">$</span>Ethnicity)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>final_data<span class="sc">$</span>Econ_Index <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(final_data<span class="sc">$</span>Econ_Index)</span>
@@ -215,20 +215,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(final_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Name           tenure              Econ_Index   Journal_rank    Gender   
- Length:553         0:112   Disciplinary     :504   3      :202   female:138  
- Class :character   1:441   Interdisciplinary: 49   2      :194   male  :415  
+ Length:553         0:112   Disciplinary     :496   3      :202   female:138  
+ Class :character   1:441   Interdisciplinary: 57   2      :194   male  :415  
  Mode  :character                                   1      : 80               
                                                     4      : 44               
                                                     5      : 13               
                                                     6      :  9               
                                                     (Other): 11               
  Ethnicity Author.Position      Rank         BA_to_PHD       PHD_to_Fac     
- 1:355     0:186           Min.   : 1.00   Min.   : 2.00   Min.   :-1.0000  
- 2: 11     1:314           1st Qu.:13.00   1st Qu.: 6.00   1st Qu.: 0.0000  
- 3:  8     2: 40           Median :23.00   Median : 7.00   Median : 0.0000  
- 4: 57     3: 11           Mean   :24.54   Mean   : 7.24   Mean   : 0.7474  
+ 1:355     0:188           Min.   : 1.00   Min.   : 2.00   Min.   :-1.0000  
+ 2: 11     1:276           1st Qu.:13.00   1st Qu.: 6.00   1st Qu.: 0.0000  
+ 3:  8     2: 77           Median :24.00   Median : 7.00   Median : 0.0000  
+ 4: 58     3: 10           Mean   :24.56   Mean   : 7.24   Mean   : 0.7474  
  5: 83     4:  2           3rd Qu.:37.00   3rd Qu.: 8.00   3rd Qu.: 1.0000  
- 6: 39                     Max.   :50.00   Max.   :23.00   Max.   : 9.0000  
+ 6: 38                     Max.   :50.00   Max.   :23.00   Max.   : 9.0000  
                                                                             
  Fac_to_decision 
  Min.   : 0.000  
