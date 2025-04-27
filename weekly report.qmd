@@ -3,7 +3,6 @@ title: "Summary of the Data"
 date: today
 format: html
 ---
-
 ## Data Summary
 
 I have tried three methods including 'nearest', 'optimal' and 'full' to run the propensity score matching. Among all three methods, the full optimal score matching shows a significant results in the later logistic regression analysis.
@@ -16,7 +15,7 @@ library("cobalt")
 library("ggplot2")   
 library('dplyr')
 library('lme4')
-final_data <- read.csv('final.csv')
+final_data <- read.csv('finalhaha.csv')
 final_data$Gender <- as.factor(final_data$Gender)
 final_data$Ethnicity <- as.factor(final_data$Ethnicity)
 final_data$Econ_Index <- as.factor(final_data$Econ_Index)
