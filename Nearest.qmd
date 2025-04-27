@@ -59,8 +59,8 @@ The following is the output of Logistic regression
 ```{r, echo=TRUE, warning= FALSE}
 matched_data <- match.data(psm_n)
 model<- glm(
-  tenure ~ Econ_Index*(Journal_rank + Gender + Author.Position + Rank + 
-    Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision),
+  tenure ~ Econ_Index + Journal_rank + Gender + Author.Position + Rank + 
+    Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision,
   data    = matched_data,
   family  = binomial(link="logit")
 )

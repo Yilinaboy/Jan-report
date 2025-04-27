@@ -29,8 +29,8 @@ model<- glm(
 
 
 model<- glm(
-  tenure ~ Econ_Index+Journal_rank + Gender + Author.Position + Rank + 
-    Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision,
+  tenure ~ Econ_Inde + Journal_rank + Gender + Author.Position + Rank + 
+    Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision
   data    = matched_data,
   weights =weights,
   family  = binomial
