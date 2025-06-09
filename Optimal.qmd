@@ -7,7 +7,7 @@ format: html
 
 The following output is the psm with the method= 'full matching'.
 
-```{r, echo=FALSE, results='hide', message=FALSE}
+```{r, echo=TRUE , message=FALSE}
 library("MatchIt")
 library("cobalt")    
 library("ggplot2")   
@@ -45,7 +45,7 @@ matched_data <- match.data(psm)
 
 ```
 
-
+## The following is the logistic regresion model with only Journal type as the predictor (Core-econ vs. Interdisciplinary)
 
 ```{r, echo=TRUE}
 model<- glm(
@@ -59,7 +59,7 @@ summary(model)
 ```
 
 
-
+## The following is the model with additional demographic factors inlcuding gender, ethnicity and age.
 
 ```{r}
 #| echo: True
@@ -74,6 +74,7 @@ summary(model)
 ```
 
 
+## The following is the model with additional factor of Journal rank (T5 vs. non T5)
 
 ```{r}
 #| echo: True
@@ -88,7 +89,7 @@ summary(model)
 ```
 
 
-
+## The following model included surname initials as one addtiona covariate. 
 
 ```{r}
 #| echo: True
@@ -103,7 +104,7 @@ summary(model)
 
 ```
 
-
+## The following model inlcudes the University rank as the last prdictor. 
 
 ```{r}
 #| echo: True

@@ -158,6 +158,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#psm-model" id="toc-psm-model" class="nav-link active" data-scroll-target="#psm-model">PSM Model</a></li>
+  <li><a href="#the-following-is-the-logistic-regresion-model-with-only-journal-type-as-the-predictor-core-econ-vs.-interdisciplinary" id="toc-the-following-is-the-logistic-regresion-model-with-only-journal-type-as-the-predictor-core-econ-vs.-interdisciplinary" class="nav-link" data-scroll-target="#the-following-is-the-logistic-regresion-model-with-only-journal-type-as-the-predictor-core-econ-vs.-interdisciplinary">The following is the logistic regresion model with only Journal type as the predictor (Core-econ vs.&nbsp;Interdisciplinary)</a></li>
+  <li><a href="#the-following-is-the-model-with-additional-demographic-factors-inlcuding-gender-ethnicity-and-age." id="toc-the-following-is-the-model-with-additional-demographic-factors-inlcuding-gender-ethnicity-and-age." class="nav-link" data-scroll-target="#the-following-is-the-model-with-additional-demographic-factors-inlcuding-gender-ethnicity-and-age.">The following is the model with additional demographic factors inlcuding gender, ethnicity and age.</a></li>
+  <li><a href="#the-following-is-the-model-with-additional-factor-of-journal-rank-t5-vs.-non-t5" id="toc-the-following-is-the-model-with-additional-factor-of-journal-rank-t5-vs.-non-t5" class="nav-link" data-scroll-target="#the-following-is-the-model-with-additional-factor-of-journal-rank-t5-vs.-non-t5">The following is the model with additional factor of Journal rank (T5 vs.&nbsp;non T5)</a></li>
+  <li><a href="#the-following-model-included-surname-initials-as-one-addtiona-covariate." id="toc-the-following-model-included-surname-initials-as-one-addtiona-covariate." class="nav-link" data-scroll-target="#the-following-model-included-surname-initials-as-one-addtiona-covariate.">The following model included surname initials as one addtiona covariate.</a></li>
+  <li><a href="#the-following-model-inlcudes-the-university-rank-as-the-last-prdictor." id="toc-the-following-model-inlcudes-the-university-rank-as-the-last-prdictor." class="nav-link" data-scroll-target="#the-following-model-inlcudes-the-university-rank-as-the-last-prdictor.">The following model inlcudes the University rank as the last prdictor.</a></li>
   </ul>
 </nav>
     </div>
@@ -187,16 +192,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="psm-model">PSM Model</h2>
 <p>The following output is the psm with the method= ‘full matching’.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"MatchIt"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"cobalt"</span>)    </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)   </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'lme4'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>agg_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"final_tier2_with_surnames.csv"</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>agg_data <span class="ot">&lt;-</span> agg_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Name =</span> <span class="fu">as.character</span>(Name),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gender =</span> <span class="fu">as.factor</span>(Gender),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rank =</span> <span class="fu">as.numeric</span>(Rank),         </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Journal_rank =</span> <span class="fu">as.factor</span>(Journal_rank),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Ethnicity =</span> <span class="fu">as.factor</span>(Ethnicity),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">Surname_Initials =</span> <span class="fu">as.factor</span>(Surname_Initials),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">tenure =</span> <span class="fu">as.factor</span>(tenure),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">BA_to_PHD =</span> <span class="fu">as.numeric</span>(BA_to_PHD),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">Econ_Index=</span><span class="fu">as.factor</span>(Econ_Index)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>agg_data<span class="sc">$</span>Rank_group <span class="ot">&lt;-</span> <span class="fu">cut</span>(agg_data<span class="sc">$</span>Rank, </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">30</span>, <span class="dv">50</span>),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Elite"</span>, <span class="st">"Leading"</span>,<span class="st">"Strong"</span>,<span class="st">"Good"</span>))</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>agg_data<span class="sc">$</span>Rank_group<span class="ot">&lt;-</span><span class="fu">as.factor</span>(agg_data<span class="sc">$</span>Rank_group)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(agg_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Name           tenure              Econ_Index  Journal_rank    Gender   
+ Length:553         0:112   Disciplinary     :496   0:251        female:138  
+ Class :character   1:441   Interdisciplinary: 57   1:302        male  :415  
+ Mode  :character                                                            
+                                                                             
+                                                                             
+                                                                             
+ Ethnicity Surname_Initials      Rank         BA_to_PHD       Surname         
+ 1:355     1:165            Min.   : 1.00   Min.   : 2.00   Length:553        
+ 2: 11     2:133            1st Qu.:13.00   1st Qu.: 6.00   Class :character  
+ 3:  8     3:129            Median :24.00   Median : 7.00   Mode  :character  
+ 4: 58     4:126            Mean   :24.57   Mean   : 7.24                     
+ 5: 83                      3rd Qu.:37.00   3rd Qu.: 8.00                     
+ 6: 38                      Max.   :50.00   Max.   :23.00                     
+   Rank_group 
+ Elite  : 61  
+ Leading:110  
+ Strong :172  
+ Good   :210  
+              
+              </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>psm <span class="ot">&lt;-</span> <span class="fu">matchit</span>(Econ_Index <span class="sc">~</span> Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Surname_Initials <span class="sc">+</span> Rank_group <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">data =</span> agg_data, <span class="at">method=</span><span class="st">'full'</span>, <span class="at">distance=</span> <span class="st">'logit'</span>, <span class="at">estimand=</span><span class="st">'ATE'</span>) </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>matched_data <span class="ot">&lt;-</span> <span class="fu">match.data</span>(psm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="the-following-is-the-logistic-regresion-model-with-only-journal-type-as-the-predictor-core-econ-vs.-interdisciplinary" class="level2">
+<h2 class="anchored" data-anchor-id="the-following-is-the-logistic-regresion-model-with-only-journal-type-as-the-predictor-core-econ-vs.-interdisciplinary">The following is the logistic regresion model with only Journal type as the predictor (Core-econ vs.&nbsp;Interdisciplinary)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -223,17 +290,20 @@ AIC: 570.23
 Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
+</section>
+<section id="the-following-is-the-model-with-additional-demographic-factors-inlcuding-gender-ethnicity-and-age." class="level2">
+<h2 class="anchored" data-anchor-id="the-following-is-the-model-with-additional-demographic-factors-inlcuding-gender-ethnicity-and-age.">The following is the model with additional demographic factors inlcuding gender, ethnicity and age.</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -267,17 +337,20 @@ AIC: 555.84
 Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
+</section>
+<section id="the-following-is-the-model-with-additional-factor-of-journal-rank-t5-vs.-non-t5" class="level2">
+<h2 class="anchored" data-anchor-id="the-following-is-the-model-with-additional-factor-of-journal-rank-t5-vs.-non-t5">The following is the model with additional factor of Journal rank (T5 vs.&nbsp;non T5)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -312,17 +385,20 @@ AIC: 538.5
 Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
+</section>
+<section id="the-following-model-included-surname-initials-as-one-addtiona-covariate." class="level2">
+<h2 class="anchored" data-anchor-id="the-following-model-included-surname-initials-as-one-addtiona-covariate.">The following model included surname initials as one addtiona covariate.</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank<span class="sc">+</span> Surname_Initials,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank<span class="sc">+</span> Surname_Initials,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -361,17 +437,20 @@ AIC: 531.97
 Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
+</section>
+<section id="the-following-model-inlcudes-the-university-rank-as-the-last-prdictor." class="level2">
+<h2 class="anchored" data-anchor-id="the-following-model-inlcudes-the-university-rank-as-the-last-prdictor.">The following model inlcudes the University rank as the last prdictor.</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank<span class="sc">+</span> Surname_Initials <span class="sc">+</span> Rank_group,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank<span class="sc">+</span> Surname_Initials <span class="sc">+</span> Rank_group,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
