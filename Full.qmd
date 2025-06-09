@@ -18,7 +18,7 @@ final_data$Gender <- as.factor(final_data$Gender)
 final_data$Ethnicity <- as.factor(final_data$Ethnicity)
 final_data$Econ_Index <- as.factor(final_data$Econ_Index)
 final_data$tenure <- as.factor(final_data$tenure)  
-final_data$Author.Position <- ordered(final_data$Author.Position, levels = c(0:4))
+final_data$Author.Position <- ordered(final_data$Author.Position, levels = c(0:9))
 final_data$Journal_rank <- ordered(final_data$Journal_rank, levels = c(1:9))
 final_data$Rank <- as.numeric(final_data$Rank)
 ```
@@ -63,4 +63,5 @@ model<- glm(
 )
 
 summary(model)
+
 ```
