@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Optimal – January Report</title>
+<title>Final_report – January Report</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./Optimal.html" aria-current="page"> 
-<span class="menu-text">PSM- Optimal method</span></a>
+<span class="menu-text">Final Report</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Full.html"> 
@@ -157,11 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#psm-model" id="toc-psm-model" class="nav-link active" data-scroll-target="#psm-model">PSM Model</a>
-  <ul class="collapse">
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
-  </ul></li>
-  <li><a href="#summary-of-logistic-regression" id="toc-summary-of-logistic-regression" class="nav-link" data-scroll-target="#summary-of-logistic-regression">Summary of Logistic Regression</a></li>
+  <li><a href="#psm-model" id="toc-psm-model" class="nav-link active" data-scroll-target="#psm-model">PSM Model</a></li>
   </ul>
 </nav>
     </div>
@@ -170,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Optimal</h1>
+<h1 class="title">Final_report</h1>
 </div>
 
 
@@ -189,185 +185,232 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="psm-model" class="level2">
 <h2 class="anchored" data-anchor-id="psm-model">PSM Model</h2>
-<p>The following output is the psm with the method= ‘optimal’, the matching ratio was set to 2:1.</p>
+<p>The following output is the psm with the method= ‘full matching’.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>psm_o<span class="ot">&lt;-</span> <span class="fu">matchit</span>(Econ_Index <span class="sc">~</span> Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD <span class="sc">+</span> PHD_to_Fac <span class="sc">+</span> Fac_to_decision,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> final_data, <span class="at">method=</span><span class="st">'optimal'</span>, <span class="at">distance=</span> <span class="st">'logit'</span>, <span class="at">replace=</span><span class="cn">FALSE</span>, <span class="at">ratio=</span><span class="dv">2</span>) </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(psm_o,<span class="at">un=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-matchit(formula = Econ_Index ~ Journal_rank + Gender + Author.Position + 
-    Rank + Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision, 
-    data = final_data, method = "optimal", distance = "logit", 
-    replace = FALSE, ratio = 2)
-
-Summary of Balance for Matched Data:
-                 Means Treated Means Control Std. Mean Diff. Var. Ratio
-distance                0.1980        0.1843          0.1135     1.5832
-Journal_rank1           0.0000        0.0000          0.0000          .
-Journal_rank2           0.2456        0.2281          0.0408          .
-Journal_rank3           0.4912        0.5263         -0.0702          .
-Journal_rank4           0.1579        0.1667         -0.0241          .
-Journal_rank5           0.0526        0.0439          0.0393          .
-Journal_rank6           0.0526        0.0351          0.0786          .
-Journal_rank7           0.0000        0.0000          0.0000          .
-Journal_rank8           0.0000        0.0000          0.0000          .
-Journal_rank9           0.0000        0.0000          0.0000          .
-Genderfemale            0.2982        0.3421         -0.0959          .
-Gendermale              0.7018        0.6579          0.0959          .
-Author.Position0        0.1228        0.1579         -0.1069          .
-Author.Position1        0.6842        0.6491          0.0755          .
-Author.Position2        0.1754        0.1842         -0.0231          .
-Author.Position3        0.0175        0.0088          0.0668          .
-Author.Position4        0.0000        0.0000          0.0000          .
-Rank                   28.6842       29.2333         -0.0407     1.0125
-Ethnicity1              0.6316        0.6579         -0.0546          .
-Ethnicity2              0.0175        0.0088          0.0668          .
-Ethnicity3              0.0175        0.0439         -0.2004          .
-Ethnicity4              0.0877        0.0789          0.0310          .
-Ethnicity5              0.1579        0.1579          0.0000          .
-Ethnicity6              0.0877        0.0526          0.1240          .
-BA_to_PHD               7.1123        7.1579         -0.0239     1.0285
-PHD_to_Fac              1.1930        1.1140          0.0333     1.5002
-Fac_to_decision         6.5649        6.5702         -0.0025     0.8880
-                 eCDF Mean eCDF Max Std. Pair Dist.
-distance            0.0057   0.1053          0.1213
-Journal_rank1       0.0000   0.0000          0.0000
-Journal_rank2       0.0175   0.0175          0.4076
-Journal_rank3       0.0351   0.0351          0.7019
-Journal_rank4       0.0088   0.0088          0.5533
-Journal_rank5       0.0088   0.0088          0.4321
-Journal_rank6       0.0175   0.0175          0.2357
-Journal_rank7       0.0000   0.0000          0.0000
-Journal_rank8       0.0000   0.0000          0.0000
-Journal_rank9       0.0000   0.0000          0.0000
-Genderfemale        0.0439   0.0439          0.9012
-Gendermale          0.0439   0.0439          0.9012
-Author.Position0    0.0351   0.0351          0.3207
-Author.Position1    0.0351   0.0351          0.6794
-Author.Position2    0.0088   0.0088          0.5766
-Author.Position3    0.0088   0.0088          0.2004
-Author.Position4    0.0000   0.0000          0.0000
-Rank                0.0248   0.1140          1.0447
-Ethnicity1          0.0263   0.0263          0.8911
-Ethnicity2          0.0088   0.0088          0.2004
-Ethnicity3          0.0263   0.0263          0.4677
-Ethnicity4          0.0088   0.0088          0.5271
-Ethnicity5          0.0000   0.0000          0.2807
-Ethnicity6          0.0351   0.0351          0.4341
-BA_to_PHD           0.0195   0.0789          1.0677
-PHD_to_Fac          0.0256   0.0614          0.7732
-Fac_to_decision     0.0127   0.0351          1.0223
-
-Sample Sizes:
-          Control Treated
-All           496      57
-Matched       114      57
-Unmatched     382       0
-Discarded       0       0</code></pre>
-</div>
-</div>
-<section id="visualization" class="level3">
-<h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
-<p>The visualization of the output is in the following:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">love.plot</span>(<span class="fu">bal.tab</span>(psm_o),</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">stat=</span><span class="fu">c</span>(<span class="st">'m'</span>,<span class="st">'v'</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">grid=</span><span class="cn">TRUE</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">threshold=</span><span class="fu">c</span>(<span class="at">m=</span>.<span class="dv">25</span>, <span class="at">v=</span><span class="fl">1.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Standardized mean differences and raw mean differences are present in the same plot. 
-Use the `stars` argument to distinguish between them and appropriately label the x-axis.</code></pre>
+<pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Optimal_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(psm_o, <span class="at">type =</span> <span class="st">"density"</span>, <span class="at">interactive =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">which.xs =</span> <span class="sc">~</span>Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank<span class="sc">+</span> Ethnicity<span class="sc">+</span>BA_to_PHD<span class="sc">+</span>PHD_to_Fac<span class="sc">+</span>Fac_to_decision)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Optimal_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Optimal_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Optimal_files/figure-html/unnamed-chunk-3-4.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="summary-of-logistic-regression" class="level2">
-<h2 class="anchored" data-anchor-id="summary-of-logistic-regression">Summary of Logistic Regression</h2>
-<p>The following is the output of Logistic regression</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>matched_data <span class="ot">&lt;-</span> <span class="fu">match.data</span>(psm_o)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index<span class="sc">+</span>Journal_rank <span class="sc">+</span> Gender <span class="sc">+</span> Author.Position <span class="sc">+</span> Rank <span class="sc">+</span> </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    Ethnicity <span class="sc">+</span> BA_to_PHD <span class="sc">+</span> PHD_to_Fac <span class="sc">+</span> Fac_to_decision,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-glm(formula = tenure ~ Econ_Index + Journal_rank + Gender + Author.Position + 
-    Rank + Ethnicity + BA_to_PHD + PHD_to_Fac + Fac_to_decision, 
-    family = binomial, data = matched_data)
+glm(formula = tenure ~ Econ_Index, family = binomial, data = matched_data, 
+    weights = weights)
 
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--2.5143   0.2998   0.5305   0.6898   1.4130  
+-3.8822   0.5767   0.6602   0.6729   1.2896  
 
 Coefficients:
-                              Estimate Std. Error z value Pr(&gt;|z|)  
-(Intercept)                    5.58433  393.88598   0.014   0.9887  
-Econ_IndexInterdisciplinary    0.62005    0.46170   1.343   0.1793  
-Journal_rank.L                -1.12793    0.68170  -1.655   0.0980 .
-Journal_rank.Q                -0.93232    0.63584  -1.466   0.1426  
-Journal_rank.C                 0.42366    0.62182   0.681   0.4957  
-Journal_rank^4                 0.33338    0.60273   0.553   0.5802  
-Gendermale                    -0.21223    0.46506  -0.456   0.6481  
-Author.Position.L             10.15076 1056.90251   0.010   0.9923  
-Author.Position.Q              7.84176  787.76865   0.010   0.9921  
-Author.Position.C              3.67240  352.30102   0.010   0.9917  
-Rank                           0.01265    0.01626   0.778   0.4365  
-Ethnicity2                   -16.60607 1693.35594  -0.010   0.9922  
-Ethnicity3                    -1.54298    0.89082  -1.732   0.0833 .
-Ethnicity4                     1.10398    1.09141   1.012   0.3118  
-Ethnicity5                    -0.40926    0.57662  -0.710   0.4779  
-Ethnicity6                    -0.95977    0.74336  -1.291   0.1967  
-BA_to_PHD                     -0.10369    0.10991  -0.943   0.3455  
-PHD_to_Fac                    -0.02535    0.10199  -0.249   0.8037  
-Fac_to_decision               -0.05499    0.09867  -0.557   0.5773  
+                            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                   1.3458     0.1109  12.134   &lt;2e-16 ***
+Econ_IndexInterdisciplinary   0.1528     0.3603   0.424    0.671    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 181.16  on 170  degrees of freedom
-Residual deviance: 156.70  on 152  degrees of freedom
-AIC: 194.7
+    Null deviance: 559.67  on 552  degrees of freedom
+Residual deviance: 559.49  on 551  degrees of freedom
+AIC: 570.23
 
-Number of Fisher Scoring iterations: 15</code></pre>
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = tenure ~ Econ_Index + Gender + Ethnicity + BA_to_PHD, 
+    family = binomial, data = matched_data, weights = weights)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.4678   0.4460   0.6036   0.6739   1.6656  
+
+Coefficients:
+                             Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                  2.243653   0.448628   5.001  5.7e-07 ***
+Econ_IndexInterdisciplinary  0.437233   0.402296   1.087 0.277106    
+Gendermale                   0.002049   0.255215   0.008 0.993593    
+Ethnicity2                  -2.379043   0.628327  -3.786 0.000153 ***
+Ethnicity3                  -0.870026   0.724598  -1.201 0.229867    
+Ethnicity4                   0.420646   0.430705   0.977 0.328744    
+Ethnicity5                  -0.395132   0.287763  -1.373 0.169717    
+Ethnicity6                  -0.298714   0.415005  -0.720 0.471659    
+BA_to_PHD                   -0.104119   0.048874  -2.130 0.033144 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 559.67  on 552  degrees of freedom
+Residual deviance: 531.00  on 544  degrees of freedom
+AIC: 555.84
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = tenure ~ Econ_Index + Gender + Ethnicity + BA_to_PHD + 
+    Journal_rank, family = binomial, data = matched_data, weights = weights)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.6025   0.3872   0.5089   0.7227   1.8813  
+
+Coefficients:
+                            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                  1.82058    0.46079   3.951 7.78e-05 ***
+Econ_IndexInterdisciplinary  0.42614    0.40331   1.057   0.2907    
+Gendermale                  -0.01103    0.25847  -0.043   0.9659    
+Ethnicity2                  -2.59499    0.64631  -4.015 5.94e-05 ***
+Ethnicity3                  -0.69309    0.73654  -0.941   0.3467    
+Ethnicity4                   0.32061    0.43642   0.735   0.4626    
+Ethnicity5                  -0.39512    0.29356  -1.346   0.1783    
+Ethnicity6                  -0.28342    0.42394  -0.669   0.5038    
+BA_to_PHD                   -0.10551    0.04990  -2.114   0.0345 *  
+Journal_rank1                0.94691    0.22768   4.159 3.20e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 559.67  on 552  degrees of freedom
+Residual deviance: 512.96  on 543  degrees of freedom
+AIC: 538.5
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank<span class="sc">+</span> Surname_Initials,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = tenure ~ Econ_Index + Gender + Ethnicity + BA_to_PHD + 
+    Journal_rank + Surname_Initials, family = binomial, data = matched_data, 
+    weights = weights)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.4826   0.3385   0.4959   0.6727   2.0410  
+
+Coefficients:
+                            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                  2.26896    0.50514   4.492 7.07e-06 ***
+Econ_IndexInterdisciplinary  0.48941    0.41210   1.188  0.23500    
+Gendermale                   0.01418    0.26160   0.054  0.95676    
+Ethnicity2                  -2.86510    0.65872  -4.349 1.36e-05 ***
+Ethnicity3                  -0.57705    0.73894  -0.781  0.43485    
+Ethnicity4                   0.34017    0.44510   0.764  0.44472    
+Ethnicity5                  -0.16227    0.30808  -0.527  0.59838    
+Ethnicity6                  -0.34884    0.43041  -0.810  0.41766    
+BA_to_PHD                   -0.10894    0.05097  -2.137  0.03257 *  
+Journal_rank1                0.97889    0.23108   4.236 2.27e-05 ***
+Surname_Initials2           -1.03507    0.32136  -3.221  0.00128 ** 
+Surname_Initials3           -0.31560    0.34139  -0.924  0.35525    
+Surname_Initials4           -0.54843    0.33859  -1.620  0.10528    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 559.67  on 552  degrees of freedom
+Residual deviance: 501.63  on 540  degrees of freedom
+AIC: 531.97
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>model<span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  tenure <span class="sc">~</span> Econ_Index <span class="sc">+</span> Gender <span class="sc">+</span> Ethnicity <span class="sc">+</span> BA_to_PHD<span class="sc">+</span> Journal_rank<span class="sc">+</span> Surname_Initials <span class="sc">+</span> Rank_group,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> matched_data,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span>weights,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family  =</span> binomial</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in eval(family$initialize): non-integer #successes in a binomial glm!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = tenure ~ Econ_Index + Gender + Ethnicity + BA_to_PHD + 
+    Journal_rank + Surname_Initials + Rank_group, family = binomial, 
+    data = matched_data, weights = weights)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.7494   0.2885   0.4924   0.6807   2.0004  
+
+Coefficients:
+                            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                  2.38951    0.65871   3.628 0.000286 ***
+Econ_IndexInterdisciplinary  0.45920    0.41281   1.112 0.265973    
+Gendermale                   0.01898    0.26676   0.071 0.943266    
+Ethnicity2                  -2.97736    0.67442  -4.415 1.01e-05 ***
+Ethnicity3                  -0.70978    0.74331  -0.955 0.339631    
+Ethnicity4                   0.27400    0.45137   0.607 0.543827    
+Ethnicity5                  -0.10177    0.31506  -0.323 0.746674    
+Ethnicity6                  -0.21897    0.44202  -0.495 0.620321    
+BA_to_PHD                   -0.10753    0.05248  -2.049 0.040488 *  
+Journal_rank1                1.28061    0.26795   4.779 1.76e-06 ***
+Surname_Initials2           -1.11816    0.32924  -3.396 0.000683 ***
+Surname_Initials3           -0.34972    0.34680  -1.008 0.313244    
+Surname_Initials4           -0.63768    0.34608  -1.843 0.065392 .  
+Rank_groupLeading           -1.00395    0.50443  -1.990 0.046560 *  
+Rank_groupStrong            -0.19452    0.50582  -0.385 0.700561    
+Rank_groupGood               0.16051    0.51961   0.309 0.757395    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 559.67  on 552  degrees of freedom
+Residual deviance: 488.32  on 537  degrees of freedom
+AIC: 524.36
+
+Number of Fisher Scoring iterations: 5</code></pre>
 </div>
 </div>
 

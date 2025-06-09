@@ -13,6 +13,7 @@ library("cobalt")
 library("ggplot2")   
 library('dplyr')
 library('lme4')
+
 agg_data <- read.csv("final_tier2_with_surnames.csv", stringsAsFactors = FALSE)
 
 library(dplyr)
@@ -34,9 +35,6 @@ agg_data$Rank_group <- cut(agg_data$Rank,
                      breaks = c(0, 5, 15, 30, 50),
                      labels = c("Elite", "Leading","Strong","Good"))
 agg_data$Rank_group<-as.factor(agg_data$Rank_group)
-
-View(agg_data)
-
 
 summary(agg_data)
 psm <- matchit(Econ_Index ~ Journal_rank + Gender + Surname_Initials + Rank_group + Ethnicity + BA_to_PHD,
